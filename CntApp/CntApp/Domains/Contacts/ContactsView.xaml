@@ -2,7 +2,7 @@
 <views:ContentViewBase xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:CntApp.Utilities.Views;assembly=CntApp"
-             x:Class="CntApp.Domains.Contacts.ContactsView">
+             x:Class="CntApp.Domains.Contacts.ContactsView" Title="Contacts">
     <views:ContentViewBase.Content>
         <StackLayout>
             <Label Text="Contacts" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />

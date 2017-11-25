@@ -1,4 +1,4 @@
-﻿using CntApp.Utilities.StateStore;
+﻿using CntApp.Utilities.States;
 using CntApp.Utilities.Views;
 using Xamarin.Forms.Xaml;
 

@@ -1,4 +1,4 @@
-﻿namespace CntApp.Utilities.StateStore
+﻿namespace CntApp.Utilities.States
 {
     public interface ILocalStateStore
     {

@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CntApp.Master.StartingMaster"
-             Title="Master" BackgroundColor="#203080">
+             Title="Master" Style="{DynamicResource MasterPanel}">
 
-    <Grid ColumnSpacing="0" RowSpacing="2">
+    <Grid ColumnSpacing="0" RowSpacing="1">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -12,14 +12,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="0" Grid.Row="0" Text="Home" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
-               TextColor="White" BackgroundColor="#304090" HorizontalOptions="FillAndExpand" HeightRequest="40">
+        <Label Grid.Column="0" Grid.Row="0" Text="Home"  Style="{DynamicResource MasterButton}">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Tapped="HomeTapped"></TapGestureRecognizer>
             </Label.GestureRecognizers>
         </Label>
-        <Label Grid.Column="0" Grid.Row="1" Text="Contacts" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
-               TextColor="White" BackgroundColor="#304090" HorizontalOptions="FillAndExpand" HeightRequest="40">
+        <Label Grid.Column="0" Grid.Row="1" Text="Contacts" Style="{DynamicResource MasterButton}">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Tapped="ContactsTapped"></TapGestureRecognizer>
             </Label.GestureRecognizers>

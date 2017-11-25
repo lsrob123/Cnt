@@ -1,9 +1,9 @@
 ﻿using CntApp.Domains.Contacts;
 using CntApp.Domains.Home;
+using CntApp.Domains.NavigationBar;
 using CntApp.Utilities.DB;
 using CntApp.Utilities.Files;
-using CntApp.Utilities.StateStore;
-using CntApp.Utilities.Views;
+using CntApp.Utilities.States;
 using Xamarin.Forms;
 
 namespace CntApp.Utilities.Dependencies
@@ -14,6 +14,7 @@ namespace CntApp.Utilities.Dependencies
         public static ILocalStateStore LocalStateStore { get; private set; }
 
         public static IFilePathResolver FilePathResolver => DependencyService.Get<IFilePathResolver>();
+        public static INavigationBarStyler NavigationBarStyler => DependencyService.Get<INavigationBarStyler>();
 
         public static HomeView HomeView => new HomeView(LocalStateStore);
         public static ContactsView ContactsView => new ContactsView(LocalStateStore);
@@ -24,15 +25,20 @@ namespace CntApp.Utilities.Dependencies
             LocalStateStore = new LocalStateStore(LocalDb);
         }
 
-        public static ContentViewBase ResolveViewByName(string detailPageName)
+        public static NavigationPage ResolveDetailPage(string detailPageName)
         {
             switch (detailPageName)
             {
                 case nameof(ContactsView):
-                    return ContactsView;
+                    return CreateDetailPage(ContactsView);
                 default:
-                    return HomeView;
+                    return CreateDetailPage(HomeView);
             }
+        }
+
+        private static NavigationPage CreateDetailPage(Page view)
+        {
+            return NavigationBarStyler.Style(new NavigationPage(view));
         }
     }
 }

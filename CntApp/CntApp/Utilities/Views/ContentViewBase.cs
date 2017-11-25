@@ -1,4 +1,4 @@
-﻿using CntApp.Utilities.StateStore;
+﻿using CntApp.Utilities.States;
 using Xamarin.Forms;
 
 namespace CntApp.Utilities.Views

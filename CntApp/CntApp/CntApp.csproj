@@ -44,6 +44,8 @@
     <Compile Include="Domains\Home\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Domains\NavigationBar\INavigationBarStyler.cs" />
+    <Compile Include="Domains\NavigationBar\NavigationBarStylerBase.cs" />
     <Compile Include="Master\Starting.xaml.cs">
       <DependentUpon>Starting.xaml</DependentUpon>
     </Compile>
@@ -59,9 +61,11 @@
     <Compile Include="Utilities\Messages\IMessageBase.cs" />
     <Compile Include="Utilities\Messages\MessageBase.cs" />
     <Compile Include="Utilities\Messages\OpenDetailPageMessage.cs" />
-    <Compile Include="Utilities\StateStore\ILocalStateStore.cs" />
-    <Compile Include="Utilities\StateStore\LocalStateStore.cs" />
+    <Compile Include="Utilities\States\ILocalStateStore.cs" />
+    <Compile Include="Utilities\States\LocalStateStore.cs" />
     <Compile Include="Utilities\Views\ContentViewBase.cs" />
+    <Compile Include="Utilities\Messages\MessageBaseExtensions.cs" />
+    <Compile Include="Utilities\Views\ContentViewBaseExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -96,6 +100,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Utilities\Constants\" />
     <Folder Include="Utilities\Controls\" />
   </ItemGroup>
   <ItemGroup>

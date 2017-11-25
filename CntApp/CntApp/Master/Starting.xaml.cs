@@ -1,4 +1,5 @@
-﻿using CntApp.Utilities.Dependencies;
+﻿using CntApp.Domains.Home;
+using CntApp.Utilities.Dependencies;
 using CntApp.Utilities.Messages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,7 +13,7 @@ namespace CntApp.Master
         {
             InitializeComponent();
 
-            Detail = new NavigationPage(DependencyRegistry.HomeView);
+            OpenDetailPage(new OpenDetailPageMessage(nameof(HomeView)));
 
             MessagingCenter.Subscribe<StartingMaster, OpenDetailPageMessage>(this, nameof(OpenDetailPageMessage),
                 (sender, message) => OpenDetailPage(message));
@@ -20,7 +21,7 @@ namespace CntApp.Master
 
         private void OpenDetailPage(OpenDetailPageMessage message)
         {
-            Detail = new NavigationPage(DependencyRegistry.ResolveViewByName(message.Data));
+            Detail = DependencyRegistry.ResolveDetailPage(message.Data);
 
             if (!MasterBehavior.Equals(MasterBehavior.Split) &&
                 !MasterBehavior.Equals(MasterBehavior.SplitOnLandscape) &&

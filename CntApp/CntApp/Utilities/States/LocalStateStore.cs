@@ -1,6 +1,6 @@
 ﻿using CntApp.Utilities.DB;
 
-namespace CntApp.Utilities.StateStore
+namespace CntApp.Utilities.States
 {
     public class LocalStateStore : ILocalStateStore
     {
