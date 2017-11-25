@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
+using CntApp.Domains.Contacts;
+using CntApp.Domains.Home;
+using CntApp.Utilities.Messages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,6 +15,16 @@ namespace CntApp.Master
         public StartingMaster()
         {
             InitializeComponent();
+        }
+
+        private void HomeTapped(object sender, EventArgs e)
+        {
+            MessagingCenter.Send(this, nameof(OpenDetailPageMessage), new OpenDetailPageMessage(nameof(HomeView)));
+        }
+
+        private void ContactsTapped(object sender, EventArgs e)
+        {
+            MessagingCenter.Send(this, nameof(OpenDetailPageMessage), new OpenDetailPageMessage(nameof(ContactsView)));
         }
     }
 }

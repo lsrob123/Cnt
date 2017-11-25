@@ -3,6 +3,7 @@ using CntApp.Domains.Home;
 using CntApp.Utilities.DB;
 using CntApp.Utilities.Files;
 using CntApp.Utilities.StateStore;
+using CntApp.Utilities.Views;
 using Xamarin.Forms;
 
 namespace CntApp.Utilities.Dependencies
@@ -21,6 +22,17 @@ namespace CntApp.Utilities.Dependencies
         {
             LocalDb = new LocalDb(FilePathResolver);
             LocalStateStore = new LocalStateStore(LocalDb);
+        }
+
+        public static ContentViewBase ResolveViewByName(string detailPageName)
+        {
+            switch (detailPageName)
+            {
+                case nameof(ContactsView):
+                    return ContactsView;
+                default:
+                    return HomeView;
+            }
         }
     }
 }
