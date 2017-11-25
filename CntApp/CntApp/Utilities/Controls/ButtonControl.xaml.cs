@@ -4,7 +4,7 @@ using Xamarin.Forms.Xaml;
 namespace CntApp.Utilities.Controls
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ButtonControl : ContentView
+    public partial class ButtonControl : Grid
     {
         public static readonly BindableProperty TextProperty =
             BindableProperty.Create(nameof(Text), typeof(string), typeof(ButtonControl));
@@ -19,6 +19,10 @@ namespace CntApp.Utilities.Controls
         public static readonly BindableProperty VerticalTextAlignmentProperty =
             BindableProperty.Create(nameof(VerticalTextAlignment), typeof(TextAlignment), typeof(ButtonControl),
                 TextAlignment.Center);
+
+        public static readonly BindableProperty TextMarginProperty =
+            BindableProperty.Create(nameof(TextMargin), typeof(Thickness), typeof(ButtonControl),
+                new Thickness(20, 0));
 
         public ButtonControl()
         {
@@ -47,6 +51,12 @@ namespace CntApp.Utilities.Controls
         {
             get => (TextAlignment) GetValue(VerticalTextAlignmentProperty);
             set => SetValue(VerticalTextAlignmentProperty, value);
+        }
+
+        public Thickness TextMargin
+        {
+            get => (Thickness) GetValue(TextMarginProperty);
+            set => SetValue(TextMarginProperty, value);
         }
     }
 }

@@ -1,13 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CntApp.Utilities.Controls.ButtonControl" x:Name="This">
-    <ContentView.Content>
-        <Grid>
-            <Label Text="{Binding Text, Source={x:Reference This}}"  
+    <Label Text="{Binding Text, Source={x:Reference This}}"  
                    TextColor="{Binding TextColor, Source={x:Reference This}}"
                    HorizontalTextAlignment="{Binding HorizontalTextAlignment, Source={x:Reference This}}" 
-                   VerticalTextAlignment="{Binding VerticalTextAlignment, Source={x:Reference This}}"      />
-        </Grid>
-    </ContentView.Content>
-</ContentView>
+                   VerticalTextAlignment= "{Binding VerticalTextAlignment, Source={x:Reference This}}" 
+           Margin="{Binding TextMargin, Source={x:Reference This}}"    />
+</Grid>
