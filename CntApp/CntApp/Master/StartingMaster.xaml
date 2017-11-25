@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:CntApp.Utilities.Controls;assembly=CntApp"
              x:Class="CntApp.Master.StartingMaster"
              Title="Master" Style="{DynamicResource MasterPanel}">
 
@@ -12,15 +13,15 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="0" Grid.Row="0" Text="Home"  Style="{DynamicResource MasterButton}">
-            <Label.GestureRecognizers>
+        <controls:ButtonControl Grid.Column="0" Grid.Row="0" Text="Home"  Style="{DynamicResource MasterButton}">
+            <controls:ButtonControl.GestureRecognizers>
                 <TapGestureRecognizer Tapped="HomeTapped"></TapGestureRecognizer>
-            </Label.GestureRecognizers>
-        </Label>
-        <Label Grid.Column="0" Grid.Row="1" Text="Contacts" Style="{DynamicResource MasterButton}">
-            <Label.GestureRecognizers>
+            </controls:ButtonControl.GestureRecognizers>
+        </controls:ButtonControl>
+        <controls:ButtonControl Grid.Column="0" Grid.Row="1" Text="Contacts" Style="{DynamicResource MasterButton}">
+            <controls:ButtonControl.GestureRecognizers>
                 <TapGestureRecognizer Tapped="ContactsTapped"></TapGestureRecognizer>
-            </Label.GestureRecognizers>
-        </Label>
+            </controls:ButtonControl.GestureRecognizers>
+        </controls:ButtonControl>
     </Grid>
 </ContentPage>
