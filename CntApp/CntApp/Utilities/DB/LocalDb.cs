@@ -1,7 +1,7 @@
-﻿using CntApp._Files;
+﻿using CntApp.Utilities.Files;
 using SQLite;
 
-namespace CntApp._DB
+namespace CntApp.Utilities.DB
 {
     public class LocalDb : ILocalDb
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using CntApp.Droid.DependencyServices;
-using CntApp._Files;
+using CntApp.Utilities.Files;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(FilePathResolver))]

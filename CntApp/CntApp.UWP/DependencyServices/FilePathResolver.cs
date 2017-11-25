@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Windows.Storage;
+using CntApp.Utilities.Files;
 using CntApp.UWP.DependencyServices;
-using CntApp._Files;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(FilePathResolver))]

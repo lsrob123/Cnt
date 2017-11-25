@@ -1,9 +1,11 @@
-﻿using CntApp._DB;
-using CntApp._Files;
-using CntApp._StateStore;
+﻿using CntApp.Domains.Contacts;
+using CntApp.Domains.Home;
+using CntApp.Utilities.DB;
+using CntApp.Utilities.Files;
+using CntApp.Utilities.StateStore;
 using Xamarin.Forms;
 
-namespace CntApp._Dependencies
+namespace CntApp.Utilities.Dependencies
 {
     public static class DependencyRegistry
     {
@@ -11,6 +13,9 @@ namespace CntApp._Dependencies
         public static ILocalStateStore LocalStateStore { get; private set; }
 
         public static IFilePathResolver FilePathResolver => DependencyService.Get<IFilePathResolver>();
+
+        public static HomeView HomeView => new HomeView(LocalStateStore);
+        public static ContactsView ContactsView => new ContactsView(LocalStateStore);
 
         public static void Init()
         {

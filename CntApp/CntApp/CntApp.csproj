@@ -38,23 +38,29 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="_DB\ILocalDb.cs" />
-    <Compile Include="_DB\LocalDb.cs" />
-    <Compile Include="_Dependencies\DependencyRegistry.cs" />
-    <Compile Include="_Files\FilePathResolverBase.cs" />
-    <Compile Include="_Files\IFilePathResolver.cs" />
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="Domains\Contacts\ContactsView.xaml.cs">
+      <DependentUpon>ContactsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Domains\Home\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Starting.xaml.cs">
+      <DependentUpon>Starting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Master\StartingMaster.xaml.cs">
+      <DependentUpon>StartingMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\DB\ILocalDb.cs" />
+    <Compile Include="Utilities\DB\LocalDb.cs" />
+    <Compile Include="Utilities\Dependencies\DependencyRegistry.cs" />
+    <Compile Include="Utilities\Files\FilePathResolverBase.cs" />
+    <Compile Include="Utilities\Files\IFilePathResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="_StateStore\ILocalStateStore.cs" />
-    <Compile Include="_StateStore\LocalStateStore.cs" />
+    <Compile Include="Utilities\StateStore\ILocalStateStore.cs" />
+    <Compile Include="Utilities\StateStore\LocalStateStore.cs" />
+    <Compile Include="Utilities\Views\ContentViewBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -86,8 +92,30 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Domains\Contacts\" />
+    <EmbeddedResource Include="Master\Starting.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Master\StartingMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domains\Home\HomeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domains\Contacts\ContactsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />

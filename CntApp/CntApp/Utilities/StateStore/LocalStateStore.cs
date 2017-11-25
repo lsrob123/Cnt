@@ -1,8 +1,6 @@
-﻿using CntApp._DB;
-using CntApp._Files;
-using Xamarin.Forms;
+﻿using CntApp.Utilities.DB;
 
-namespace CntApp._StateStore
+namespace CntApp.Utilities.StateStore
 {
     public class LocalStateStore : ILocalStateStore
     {

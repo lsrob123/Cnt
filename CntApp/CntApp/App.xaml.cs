@@ -1,5 +1,5 @@
-﻿using CntApp._Dependencies;
-using CntApp._StateStore;
+﻿using CntApp.Master;
+using CntApp.Utilities.Dependencies;
 using Xamarin.Forms;
 
 namespace CntApp
@@ -12,7 +12,7 @@ namespace CntApp
 
             DependencyRegistry.Init();
 
-            MainPage = new MainPage();
+            MainPage = new Starting();
         }
 
         protected override void OnStart()

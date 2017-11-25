@@ -1,4 +1,4 @@
-﻿namespace CntApp._Files
+﻿namespace CntApp.Utilities.Files
 {
     public interface IFilePathResolver
     {
