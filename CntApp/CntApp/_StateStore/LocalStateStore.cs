@@ -4,20 +4,13 @@ using Xamarin.Forms;
 
 namespace CntApp._StateStore
 {
-    public class LocalStateStore
+    public class LocalStateStore : ILocalStateStore
     {
-        private static readonly LocalDb LocalDb;
+        private readonly  ILocalDb _localDb;
 
-        static LocalStateStore()
+        public LocalStateStore(ILocalDb localDb)
         {
-            LocalDb = new LocalDb(DependencyService.Get<IFilePathResolver>());
-            Current = new LocalStateStore();
-        }
-
-        public static LocalStateStore Current { get; }
-
-        public static void Start()
-        {
+            _localDb = localDb;
         }
     }
 }

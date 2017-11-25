@@ -3,7 +3,7 @@ using SQLite;
 
 namespace CntApp._DB
 {
-    public class LocalDb
+    public class LocalDb : ILocalDb
     {
         private readonly SQLiteAsyncConnection _db;
 

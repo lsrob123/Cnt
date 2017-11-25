@@ -1,4 +1,5 @@
-﻿using CntApp._StateStore;
+﻿using CntApp._Dependencies;
+using CntApp._StateStore;
 using Xamarin.Forms;
 
 namespace CntApp
@@ -9,7 +10,7 @@ namespace CntApp
         {
             InitializeComponent();
 
-            LocalStateStore.Start();
+            DependencyRegistry.Init();
 
             MainPage = new MainPage();
         }
