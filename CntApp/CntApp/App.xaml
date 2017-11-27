@@ -5,18 +5,22 @@
              x:Class="CntApp.App">
 	<Application.Resources>
 		<ResourceDictionary>
-            <Color x:Key="BarBackground">#6677cc</Color>
+            <Color x:Key="BarBackground">#203060</Color>
 		    <Color x:Key="BarText">White</Color>
-            <Color x:Key="PanelBackground">#263373</Color>
+            <Color x:Key="PanelBackground">#132039</Color>
 		    <Color x:Key="PanelText">White</Color>
-		    <Color x:Key="ButtonBackground">#304090</Color>
+            <Color x:Key="ButtonBlue">#304890</Color>
+		    <Color x:Key="ButtonGreen">#309048</Color>
+		    <Color x:Key="ButtonOrange">#c05830</Color>
+            <Color x:Key="ButtonPink">#c03058</Color>
+            <Color x:Key="ButtonPurple">#6030b0</Color>
 		    <Color x:Key="ButtonText">White</Color>
 
             <Style x:Key="MasterPanel" TargetType="ContentPage">
                 <Setter Property="BackgroundColor" Value="{DynamicResource PanelBackground}"></Setter>
             </Style>
             <Style x:Key="MasterButton" TargetType="controls:ButtonControl">
-                <Setter Property="BackgroundColor" Value="{DynamicResource ButtonBackground}"></Setter>
+                <Setter Property="BackgroundColor" Value="{DynamicResource ButtonBlue}"></Setter>
                 <Setter Property="TextColor" Value="{DynamicResource ButtonText}"></Setter>
                 <Setter Property="HeightRequest" Value="40"></Setter>
                 <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
