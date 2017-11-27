@@ -20,14 +20,14 @@
                 <TapGestureRecognizer Tapped="HomeTapped"></TapGestureRecognizer>
             </controls:ButtonControl.GestureRecognizers>
         </controls:ButtonControl>
-        <controls:ButtonControl Grid.Column="0" Grid.Row="1" Text="Contacts" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonOrange}">
+        <controls:ButtonControl Grid.Column="0" Grid.Row="1" Text="Manage Contacts" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonOrange}">
             <controls:ButtonControl.GestureRecognizers>
                 <TapGestureRecognizer Tapped="ContactsTapped"></TapGestureRecognizer>
             </controls:ButtonControl.GestureRecognizers>
         </controls:ButtonControl>
-        <controls:ButtonControl Grid.Column="0" Grid.Row="2" Text="Circles" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonGreen}">
+        <controls:ButtonControl Grid.Column="0" Grid.Row="2" Text="Manage Circles" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonGreen}">
         </controls:ButtonControl>
-        <controls:ButtonControl Grid.Column="0" Grid.Row="3" Text="Teams" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonPink}">
+        <controls:ButtonControl Grid.Column="0" Grid.Row="3" Text="Manage Teams" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonPink}">
         </controls:ButtonControl>
     </Grid>
 </ContentPage>

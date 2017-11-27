@@ -4,8 +4,9 @@
              xmlns:views="clr-namespace:CntApp.Utilities.Views;assembly=CntApp"
              x:Class="CntApp.Domains.Home.HomeView" Title="Home">
     <views:ContentViewBase.Content>
-        <StackLayout>
+        <!--<StackLayout>
             <Label Text="Home" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        </StackLayout>-->
+        <views:ContentGridView></views:ContentGridView>
     </views:ContentViewBase.Content>
 </views:ContentViewBase>

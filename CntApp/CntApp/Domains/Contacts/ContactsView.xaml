@@ -4,8 +4,8 @@
              xmlns:views="clr-namespace:CntApp.Utilities.Views;assembly=CntApp"
              x:Class="CntApp.Domains.Contacts.ContactsView" Title="Contacts">
     <views:ContentViewBase.Content>
-        <StackLayout>
+        <!--<StackLayout>
             <Label Text="Contacts" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        </StackLayout>-->
     </views:ContentViewBase.Content>
 </views:ContentViewBase>
