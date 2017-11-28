@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:CntApp.Utilities.Controls;assembly=CntApp"
+             xmlns:extension="clr-namespace:CntApp.Utilities.Extension;assembly=CntApp"
              x:Class="CntApp.Master.StartingMaster"
              Title="Main Menu" Style="{DynamicResource MasterPanel}">
 
@@ -15,12 +16,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <controls:ButtonControl Grid.Column="0" Grid.Row="0" Text="Home"  Style="{DynamicResource MasterButton}">
+        <controls:ButtonControl x:Name="BtnHome" Grid.Column="0" Grid.Row="0" Text="Home" Style="{DynamicResource MasterButton}">
             <controls:ButtonControl.GestureRecognizers>
                 <TapGestureRecognizer Tapped="HomeTapped"></TapGestureRecognizer>
             </controls:ButtonControl.GestureRecognizers>
         </controls:ButtonControl>
-        <controls:ButtonControl Grid.Column="0" Grid.Row="1" Text="Manage Contacts" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonOrange}">
+        <controls:ButtonControl x:Name="BtnManageContacts" Grid.Column="0" Grid.Row="1" Text="Manage Contacts" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonOrange}">
             <controls:ButtonControl.GestureRecognizers>
                 <TapGestureRecognizer Tapped="ContactsTapped"></TapGestureRecognizer>
             </controls:ButtonControl.GestureRecognizers>

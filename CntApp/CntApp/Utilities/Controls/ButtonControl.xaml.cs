@@ -24,6 +24,9 @@ namespace CntApp.Utilities.Controls
             BindableProperty.Create(nameof(TextMargin), typeof(Thickness), typeof(ButtonControl),
                 new Thickness(20, 0));
 
+        public static readonly BindableProperty IconProperty =
+            BindableProperty.Create(nameof(Icon), typeof(string), typeof(ButtonControl));
+
         public ButtonControl()
         {
             InitializeComponent();
@@ -57,6 +60,16 @@ namespace CntApp.Utilities.Controls
         {
             get => (Thickness) GetValue(TextMarginProperty);
             set => SetValue(TextMarginProperty, value);
+        }
+
+        public string Icon
+        {
+            get => (string) GetValue(IconProperty);
+            set
+            {
+                SetValue(IconProperty, value);
+                ButtonIcon.Source = ImageSource.FromResource(value);
+            }
         }
     }
 }
