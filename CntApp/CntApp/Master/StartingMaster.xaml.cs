@@ -18,6 +18,7 @@ namespace CntApp.Master
 
             BtnHome.Icon = "CntApp.Images.map-7.png";
             BtnManageContacts.Icon = "CntApp.Images.map-8.png";
+            BtnManageCircles.Icon= "CntApp.Images.circle.png";
         }
 
         private void HomeTapped(object sender, EventArgs e)
