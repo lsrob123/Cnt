@@ -2,14 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:CntApp.Utilities.Controls;assembly=CntApp"
-             xmlns:ff="clr-namespace:FFImageLoading;assembly=FFImageLoading.Forms"
-             xmlns:ffSvg="clr-namespace:FFImageLoading;assembly=FFImageLoading.Svg.Forms"
-             xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:svg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              x:Class="CntApp.Master.StartingMaster"
              Title="Main Menu" Style="{DynamicResource MasterPanel}">
 
     <Grid ColumnSpacing="0" RowSpacing="1" Padding="0,1,0,0">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -33,6 +32,7 @@
         </controls:ButtonControl>
         <controls:ButtonControl Grid.Column="0" Grid.Row="3" Text="Manage Teams" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonPink}">
         </controls:ButtonControl>
-        <forms:SvgCachedImage x:Name="SvgCircle" Grid.Column="0" Grid.Row="4" WidthRequest="100" HeightRequest="100" />    
+        <svg:SvgCachedImage x:Name="SvgCircle" Source="resource://CntApp.Images.circle.svg" Grid.Column="0" Grid.Row="4" WidthRequest="100" HeightRequest="100" />
+        <svg:SvgCachedImage x:Name="SvgDownload" Source="resource://CntApp.Images.folder-download-2.svg" Grid.Column="0" Grid.Row="5" WidthRequest="100" HeightRequest="100" />
     </Grid>
 </ContentPage>
