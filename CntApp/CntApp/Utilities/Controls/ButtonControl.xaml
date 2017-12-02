@@ -3,16 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CntApp.Utilities.Controls.ButtonControl" x:Name="This"
       xmlns:extension="clr-namespace:CntApp.Utilities.Extension;assembly=CntApp"
-      >
+      xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
     <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="30"></ColumnDefinition>
+        <ColumnDefinition Width="32"></ColumnDefinition>
         <ColumnDefinition Width="*"></ColumnDefinition>
         <ColumnDefinition Width="*"></ColumnDefinition>
     </Grid.ColumnDefinitions>
-    <Image x:Name="ButtonIcon" Grid.Column="0" Margin="5,0,0,0" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="20"></Image>
+    <ffSvg:SvgCachedImage x:Name="ButtonIcon" Grid.Column="0" Source="{Binding SvgIconSource, Source={x:Reference This}}"
+                          Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="14"></ffSvg:SvgCachedImage>
     <Label LineBreakMode="NoWrap" Grid.Column="1" Text="{Binding Text, Source={x:Reference This}}"  
                    TextColor="{Binding TextColor, Source={x:Reference This}}"
                    HorizontalTextAlignment="{Binding HorizontalTextAlignment, Source={x:Reference This}}" 
                    VerticalTextAlignment= "{Binding VerticalTextAlignment, Source={x:Reference This}}" 
-           Margin="{Binding TextMargin, Source={x:Reference This}}"    />
+           Margin="0,0,10,0"    />
 </Grid>

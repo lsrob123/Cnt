@@ -5,10 +5,11 @@
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              x:Class="CntApp.Master.StartingMaster"
-             Title="Main Menu" Style="{DynamicResource MasterPanel}">
+             Title="Main Menu" Style="{DynamicResource MasterPanel}" WidthRequest="100">
 
     <Grid ColumnSpacing="0" RowSpacing="1" Padding="0,1,0,0">
         <Grid.RowDefinitions>
+            <RowDefinition Height="1"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -20,22 +21,23 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <controls:ButtonControl x:Name="BtnHome" Grid.Column="0" Grid.Row="0" Text="Home" Style="{DynamicResource MasterButton}">
+        <!--<ffSvg:SvgCachedImage Source="resource://CntApp.Images.logo-white-shadow.svg" Grid.Column="0" Grid.Row="0" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" HorizontalOptions="Center" />-->
+
+        <controls:ButtonControl x:Name="BtnHome" SvgIconSource="resource://CntApp.Images.home-white.svg" Grid.Column="0" Grid.Row="1" Text="Home" Style="{DynamicResource MasterButton}">
             <controls:ButtonControl.GestureRecognizers>
                 <TapGestureRecognizer Tapped="HomeTapped"></TapGestureRecognizer>
             </controls:ButtonControl.GestureRecognizers>
         </controls:ButtonControl>
-        <controls:ButtonControl x:Name="BtnManageContacts" Grid.Column="0" Grid.Row="1" Text="Manage Contacts" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonOrange}">
+        <controls:ButtonControl x:Name="BtnManageContacts" SvgIconSource="resource://CntApp.Images.contacts-white.svg" Grid.Column="0" Grid.Row="2" Text="Contacts" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonOrange}">
             <controls:ButtonControl.GestureRecognizers>
                 <TapGestureRecognizer Tapped="ContactsTapped"></TapGestureRecognizer>
             </controls:ButtonControl.GestureRecognizers>
         </controls:ButtonControl>
-        <controls:ButtonControl x:Name="BtnManageCircles" Grid.Column="0" Grid.Row="2" Text="Manage Circles" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonGreen}">
+        <controls:ButtonControl x:Name="BtnManageCircles" SvgIconSource="resource://CntApp.Images.social-circle-white.svg" Grid.Column="0" Grid.Row="3" Text="Circles" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonGreen}">
         </controls:ButtonControl>
-        <controls:ButtonControl Grid.Column="0" Grid.Row="3" Text="Manage Teams" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonPink}">
+        <controls:ButtonControl  SvgIconSource="resource://CntApp.Images.team.svg" Grid.Column="0" Grid.Row="4" Text="Teams" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonPink}">
         </controls:ButtonControl>
-        <ff:CachedImage Grid.Column="0" Grid.Row="4" Source="resource://CntApp.Images.map-7.png" WidthRequest="100" HeightRequest="100"></ff:CachedImage>
-        <ffSvg:SvgCachedImage x:Name="SvgCircle" Source="resource://CntApp.Images.circle.svg" Grid.Column="0" Grid.Row="5" WidthRequest="100" HeightRequest="100" />
-        <ffSvg:SvgCachedImage x:Name="SvgDownload" Source="resource://CntApp.Images.folder-download-2.svg" Grid.Column="0" Grid.Row="6" WidthRequest="100" HeightRequest="100" />
+        <controls:ButtonControl  SvgIconSource="resource://CntApp.Images.calendar-white.svg" Grid.Column="0" Grid.Row="5" Text="Events" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonPurple}">
+        </controls:ButtonControl>
     </Grid>
 </ContentPage>
