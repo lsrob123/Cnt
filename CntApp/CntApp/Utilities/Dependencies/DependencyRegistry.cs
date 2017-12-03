@@ -16,8 +16,8 @@ namespace CntApp.Utilities.Dependencies
         public static IFilePathResolver FilePathResolver => DependencyService.Get<IFilePathResolver>();
         public static INavigationBarStyler NavigationBarStyler => DependencyService.Get<INavigationBarStyler>();
 
-        public static HomeView HomeView => new HomeView(LocalStateStore);
-        public static ContactsView ContactsView => new ContactsView(LocalStateStore);
+        public static HomePage HomePage => new HomePage(LocalStateStore);
+        public static ContactsPage ContactsPage => new ContactsPage();
 
         public static void Init()
         {
@@ -29,10 +29,10 @@ namespace CntApp.Utilities.Dependencies
         {
             switch (detailPageName)
             {
-                case nameof(ContactsView):
-                    return CreateDetailPage(ContactsView);
+                case nameof(Domains.Contacts.ContactsPage):
+                    return CreateDetailPage(ContactsPage);
                 default:
-                    return CreateDetailPage(HomeView);
+                    return CreateDetailPage(HomePage);
             }
         }
 

@@ -38,11 +38,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Domains\Contacts\ContactsView.xaml.cs">
-      <DependentUpon>ContactsView.xaml</DependentUpon>
+    <Compile Include="Domains\Contacts\ContactsPage.xaml.cs">
+      <DependentUpon>ContactsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Domains\Home\HomeView.xaml.cs">
-      <DependentUpon>HomeView.xaml</DependentUpon>
+    <Compile Include="Domains\Footers\FooterBar.xaml.cs">
+      <DependentUpon>FooterBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domains\Home\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Domains\NavigationBar\INavigationBarStyler.cs" />
     <Compile Include="Domains\NavigationBar\NavigationBarStylerBase.cs" />
@@ -55,7 +58,6 @@
     <Compile Include="Utilities\Controls\ButtonControl.xaml.cs">
       <DependentUpon>ButtonControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Utilities\Controls\ButtonIconSource.cs" />
     <Compile Include="Utilities\DB\ILocalDb.cs" />
     <Compile Include="Utilities\DB\LocalDb.cs" />
     <Compile Include="Utilities\Dependencies\DependencyRegistry.cs" />
@@ -69,12 +71,7 @@
     <Compile Include="Utilities\Reflection\ReflectionHelper.cs" />
     <Compile Include="Utilities\States\ILocalStateStore.cs" />
     <Compile Include="Utilities\States\LocalStateStore.cs" />
-    <Compile Include="Utilities\Views\ContentGridView.xaml.cs">
-      <DependentUpon>ContentGridView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Utilities\Views\ContentViewBase.cs" />
     <Compile Include="Utilities\Messages\MessageBaseExtensions.cs" />
-    <Compile Include="Utilities\Views\ContentViewBaseExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -142,25 +139,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Domains\Home\HomeView.xaml">
+    <EmbeddedResource Include="Domains\Home\HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Domains\Contacts\ContactsView.xaml">
+    <EmbeddedResource Include="Domains\Contacts\ContactsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Utilities\Controls\ButtonControl.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Utilities\Views\ContentGridView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -191,6 +182,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\contacts-white-02.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domains\Footers\FooterBar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.5.0.91635\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.91635\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />

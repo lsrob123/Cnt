@@ -33,7 +33,7 @@
                 <TapGestureRecognizer Tapped="ContactsTapped"></TapGestureRecognizer>
             </controls:ButtonControl.GestureRecognizers>
         </controls:ButtonControl>
-        <controls:ButtonControl x:Name="BtnManageCircles" SvgIconSource="resource://CntApp.Images.social-circle-white.svg" Grid.Column="0" Grid.Row="3" Text="Circles" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonGreen}">
+        <controls:ButtonControl x:Name="BtnManageCircles" SvgIconSource="resource://CntApp.Images.social-circle-white.svg" Grid.Column="0" Grid.Row="3" Text="Social Circles" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonGreen}">
         </controls:ButtonControl>
         <controls:ButtonControl  SvgIconSource="resource://CntApp.Images.team.svg" Grid.Column="0" Grid.Row="4" Text="Teams" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonPink}">
         </controls:ButtonControl>

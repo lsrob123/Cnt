@@ -2,19 +2,21 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:CntApp.Utilities.Controls;assembly=CntApp"
+             xmlns:footers="clr-namespace:CntApp.Domains.Footers;assembly=CntApp"
              x:Class="CntApp.App">
-	<Application.Resources>
-		<ResourceDictionary>
+    <Application.Resources>
+        <ResourceDictionary>
             <Color x:Key="BarBackground">#203050</Color>
-		    <Color x:Key="BarText">White</Color>
+            <Color x:Key="FooterBarBackground">#203050</Color>
+            <Color x:Key="BarText">White</Color>
             <Color x:Key="PanelBackground">#132039</Color>
-		    <Color x:Key="PanelText">White</Color>
+            <Color x:Key="PanelText">White</Color>
             <Color x:Key="ButtonBlue">#304890</Color>
-		    <Color x:Key="ButtonGreen">#309048</Color>
-		    <Color x:Key="ButtonOrange">#c05830</Color>
+            <Color x:Key="ButtonGreen">#309048</Color>
+            <Color x:Key="ButtonOrange">#c05830</Color>
             <Color x:Key="ButtonPink">#c03058</Color>
             <Color x:Key="ButtonPurple">#6030b0</Color>
-		    <Color x:Key="ButtonText">White</Color>
+            <Color x:Key="ButtonText">White</Color>
 
             <Style x:Key="MasterPanel" TargetType="ContentPage">
                 <Setter Property="BackgroundColor" Value="{DynamicResource PanelBackground}"></Setter>
@@ -26,7 +28,24 @@
                 <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
                 <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
-		    </Style>
+            </Style>
+            <Style x:Key="FooterBar" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="{DynamicResource FooterBarBackground}"></Setter>
+                <Setter Property="HeightRequest" Value="50"></Setter>
+            </Style>
+
+            <ControlTemplate x:Key="CommonDetailPageTemplate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*">
+                        </RowDefinition>
+                        <RowDefinition Height="50">
+                        </RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ContentPresenter Grid.Row="0" Padding="10"></ContentPresenter>
+                    <footers:FooterBar Grid.Row="1"></footers:FooterBar>
+                </Grid>
+            </ControlTemplate>
         </ResourceDictionary>
-	</Application.Resources>
+    </Application.Resources>
 </Application>

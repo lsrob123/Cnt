@@ -20,12 +20,12 @@ namespace CntApp.Master
 
         private void HomeTapped(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, nameof(OpenDetailPageMessage), new OpenDetailPageMessage(nameof(HomeView)));
+            MessagingCenter.Send(this, nameof(OpenDetailPageMessage), new OpenDetailPageMessage(nameof(HomePage)));
         }
 
         private void ContactsTapped(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, nameof(OpenDetailPageMessage), new OpenDetailPageMessage(nameof(ContactsView)));
+            MessagingCenter.Send(this, nameof(OpenDetailPageMessage), new OpenDetailPageMessage(nameof(ContactsPage)));
         }
     }
 }

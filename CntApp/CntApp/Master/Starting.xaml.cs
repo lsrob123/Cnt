@@ -1,5 +1,4 @@
-﻿using System;
-using CntApp.Domains.Home;
+﻿using CntApp.Domains.Home;
 using CntApp.Utilities.Dependencies;
 using CntApp.Utilities.Messages;
 using Xamarin.Forms;
@@ -14,7 +13,7 @@ namespace CntApp.Master
         {
             InitializeComponent();
 
-            OpenDetailPage(new OpenDetailPageMessage(nameof(HomeView)));
+            OpenDetailPage(new OpenDetailPageMessage(nameof(HomePage)));
 
             MessagingCenter.Subscribe<StartingMaster, OpenDetailPageMessage>(this, nameof(OpenDetailPageMessage),
                 (sender, message) => OpenDetailPage(message));

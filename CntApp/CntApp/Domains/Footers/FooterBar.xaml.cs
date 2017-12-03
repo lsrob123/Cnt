@@ -1,12 +1,12 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace CntApp.Utilities.Views
+namespace CntApp.Domains.Footers
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ContentGridView : Grid
+    public partial class FooterBar : StackLayout
     {
-        public ContentGridView()
+        public FooterBar()
         {
             InitializeComponent();
         }
