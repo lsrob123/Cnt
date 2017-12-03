@@ -12,10 +12,11 @@
             <Color x:Key="PanelBackground">#132039</Color>
             <Color x:Key="PanelText">White</Color>
             <Color x:Key="ButtonBlue">#304890</Color>
-            <Color x:Key="ButtonGreen">#309048</Color>
+            <Color x:Key="ButtonGreen">#208030</Color>
             <Color x:Key="ButtonOrange">#c05830</Color>
             <Color x:Key="ButtonPink">#c03058</Color>
             <Color x:Key="ButtonPurple">#6030b0</Color>
+            <Color x:Key="ButtonBlueGreen">#065050</Color>
             <Color x:Key="ButtonText">White</Color>
 
             <Style x:Key="MasterPanel" TargetType="ContentPage">

@@ -2,8 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:CntApp.Utilities.Controls;assembly=CntApp"
-             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              x:Class="CntApp.Master.StartingMaster"
              Title="Main Menu" Style="{DynamicResource MasterPanel}" WidthRequest="100">
 
@@ -37,7 +35,9 @@
         </controls:ButtonControl>
         <controls:ButtonControl  SvgIconSource="resource://CntApp.Images.team.svg" Grid.Column="0" Grid.Row="4" Text="Teams" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonPink}">
         </controls:ButtonControl>
-        <controls:ButtonControl  SvgIconSource="resource://CntApp.Images.calendar-white.svg" Grid.Column="0" Grid.Row="5" Text="Events" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonPurple}">
+        <controls:ButtonControl  SvgIconSource="resource://CntApp.Images.calendar-white.svg" Grid.Column="0" Grid.Row="5" Text="Events" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonBlueGreen}">
+        </controls:ButtonControl>
+        <controls:ButtonControl  SvgIconSource="resource://CntApp.Images.settings-white.svg" Grid.Column="0" Grid.Row="6" Text="Settings" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonPurple}">
         </controls:ButtonControl>
     </Grid>
 </ContentPage>

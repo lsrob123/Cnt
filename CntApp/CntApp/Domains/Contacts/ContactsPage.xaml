@@ -3,6 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CntApp.Domains.Contacts.ContactsPage" Title="Contacts" ControlTemplate="{StaticResource CommonDetailPageTemplate}">
     <ContentPage.Content>
-        <Label TextColor="Blue" Text="Haha Home !"></Label>
+        <Label TextColor="Blue" Text="Haha Contacts !"></Label>
     </ContentPage.Content>
 </ContentPage>

@@ -58,6 +58,9 @@
     <Compile Include="Utilities\Controls\ButtonControl.xaml.cs">
       <DependentUpon>ButtonControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\Controls\FooterButtonControl.xaml.cs">
+      <DependentUpon>FooterButtonControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\DB\ILocalDb.cs" />
     <Compile Include="Utilities\DB\LocalDb.cs" />
     <Compile Include="Utilities\Dependencies\DependencyRegistry.cs" />
@@ -188,6 +191,22 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\settings-white.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\message-new-white.svg" />
+    <EmbeddedResource Include="Images\message-white.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Utilities\Controls\FooterButtonControl.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\calendar-new-white.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.5.0.91635\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.91635\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />

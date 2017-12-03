@@ -1,5 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<StackLayout xmlns="http://xamarin.com/schemas/2014/forms" 
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:CntApp.Utilities.Controls;assembly=CntApp"
              x:Class="CntApp.Domains.Footers.FooterBar" Style="{DynamicResource FooterBar}">
-</StackLayout>
+    
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"></ColumnDefinition>
+        <ColumnDefinition Width="*"></ColumnDefinition>
+        <ColumnDefinition Width="*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+
+    <controls:FooterButtonControl SvgIconSource="resource://CntApp.Images.home-white.svg" Text="Home" Grid.Column="0">
+        <controls:FooterButtonControl.GestureRecognizers>
+            <TapGestureRecognizer Tapped="HomeTapped"></TapGestureRecognizer>
+        </controls:FooterButtonControl.GestureRecognizers>
+    </controls:FooterButtonControl>
+    <controls:FooterButtonControl  SvgIconSource="resource://CntApp.Images.calendar-new-white.svg" Text="Events" 
+                                   Grid.Column="1"></controls:FooterButtonControl>
+    <controls:FooterButtonControl  SvgIconSource="resource://CntApp.Images.message-new-white.svg" Text="Cloud Messages" 
+                                   Grid.Column="2"></controls:FooterButtonControl>
+</Grid>

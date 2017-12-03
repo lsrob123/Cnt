@@ -2,7 +2,6 @@
 <Grid xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CntApp.Utilities.Controls.ButtonControl" x:Name="This"
-      xmlns:extension="clr-namespace:CntApp.Utilities.Extension;assembly=CntApp"
       xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="32"></ColumnDefinition>
