@@ -1,14 +1,19 @@
-﻿using CntApp.Utilities.DB;
+﻿using CntApp.Domains.MyProfile;
+using CntApp.Utilities.DB;
+using CntApp.Utilities.Dependencies;
 
 namespace CntApp.Utilities.States
 {
     public class LocalStateStore : ILocalStateStore
     {
-        private readonly  ILocalDb _localDb;
+        private readonly ILocalDb _localDb;
 
-        public LocalStateStore(ILocalDb localDb)
+        public LocalStateStore()
         {
-            _localDb = localDb;
+            _localDb = DependencyRegistry.LocalDb;
+            MyProfileViewModel = DependencyRegistry.MyProfileViewModel;
         }
+
+        public MyProfileViewModel MyProfileViewModel { get; protected set; }
     }
 }

@@ -4,7 +4,6 @@
              x:Class="CntApp.Master.Starting"
              xmlns:pages="clr-namespace:CntApp.Master">
   <MasterDetailPage.Master>
-    <pages:StartingMaster x:Name="MasterPage" />
   </MasterDetailPage.Master>
   <MasterDetailPage.Detail>
     <NavigationPage>

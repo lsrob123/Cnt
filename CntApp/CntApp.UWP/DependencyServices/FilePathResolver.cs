@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using Windows.Storage;
 using CntApp.Utilities.Files;
 using CntApp.UWP.DependencyServices;
 using Xamarin.Forms;
@@ -10,6 +9,8 @@ namespace CntApp.UWP.DependencyServices
 {
     public class FilePathResolver : FilePathResolverBase
     {
+        public override string MyProfileImagePath => Compose(@"/Assets/MyProfile/{0}", DefaultProfileImageFileName);
+
         public override string GetToolbarItemIconPath(string iconFileName)
         {
             //return ApplicationData.Current.LocalFolder.Path.TrimEnd('/') +

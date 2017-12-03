@@ -47,6 +47,10 @@
     <Compile Include="Domains\Home\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Domains\MyProfile\MyProfileView.xaml.cs">
+      <DependentUpon>MyProfileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Domains\MyProfile\MyProfileViewModel.cs" />
     <Compile Include="Domains\NavigationBar\INavigationBarStyler.cs" />
     <Compile Include="Domains\NavigationBar\NavigationBarStylerBase.cs" />
     <Compile Include="Master\Starting.xaml.cs">
@@ -55,6 +59,7 @@
     <Compile Include="Master\StartingMaster.xaml.cs">
       <DependentUpon>StartingMaster.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Utilities\Controls\ButtonControl.xaml.cs">
       <DependentUpon>ButtonControl.xaml</DependentUpon>
     </Compile>
@@ -97,6 +102,9 @@
     </Reference>
     <Reference Include="FFImageLoading.Svg.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.FFImageLoading.Svg.2.2.25\lib\portable-win+net45+wp80+win81+wpa81\FFImageLoading.Svg.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Transformations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.Transformations.2.2.25\lib\portable-win+net45+wp80+win81+wpa81\FFImageLoading.Transformations.dll</HintPath>
     </Reference>
     <Reference Include="SkiaSharp, Version=1.59.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\..\packages\SkiaSharp.1.59.2\lib\portable-net45+win8+wpa81+wp8\SkiaSharp.dll</HintPath>
@@ -207,6 +215,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\calendar-new-white.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Domains\MyProfile\myprofile.jpg" />
+    <EmbeddedResource Include="Images\edit-white.svg" />
+    <EmbeddedResource Include="Images\email-white.svg" />
+    <EmbeddedResource Include="Images\mobile-white.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domains\MyProfile\MyProfileView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.5.0.91635\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.91635\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />

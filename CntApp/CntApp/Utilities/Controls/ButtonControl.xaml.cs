@@ -23,9 +23,17 @@ namespace CntApp.Utilities.Controls
         public static readonly BindableProperty SvgIconSourceProperty =
             BindableProperty.Create(nameof(SvgIconSource), typeof(string), typeof(ButtonControl));
 
+        public static readonly BindableProperty FontSizeProperty =
+            BindableProperty.Create(nameof(FontSize), typeof(int), typeof(ButtonControl), 12);
+
+        public static readonly BindableProperty SvgIconHeightProperty =
+            BindableProperty.Create(nameof(SvgIconHeight), typeof(int), typeof(ButtonControl), 14);
+
         public ButtonControl()
         {
             InitializeComponent();
+
+            
         }
 
         public string Text
@@ -56,6 +64,18 @@ namespace CntApp.Utilities.Controls
         {
             get => (string) GetValue(SvgIconSourceProperty);
             set => SetValue(SvgIconSourceProperty, value);
+        }
+
+        public int FontSize
+        {
+            get => (int) GetValue(FontSizeProperty);
+            set => SetValue(FontSizeProperty, value);
+        }
+
+        public int SvgIconHeight
+        {
+            get => (int) GetValue(SvgIconHeightProperty);
+            set => SetValue(SvgIconHeightProperty, value);
         }
     }
 }

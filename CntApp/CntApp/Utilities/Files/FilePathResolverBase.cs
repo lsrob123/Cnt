@@ -2,6 +2,8 @@
 {
     public abstract class FilePathResolverBase : IFilePathResolver
     {
+        public const string DefaultProfileImageFileName = "myprofile.jpg";
+        public abstract string MyProfileImagePath { get; }
         public abstract string GetToolbarItemIconPath(string iconFileName);
         public abstract string GetSqliteDbFilePath(string dbFileName);
 

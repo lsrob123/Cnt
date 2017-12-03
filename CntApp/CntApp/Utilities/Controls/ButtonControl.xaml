@@ -5,13 +5,16 @@
       xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="32"></ColumnDefinition>
-        <ColumnDefinition Width="*"></ColumnDefinition>
+        <ColumnDefinition Width="Auto"></ColumnDefinition>
         <ColumnDefinition Width="*"></ColumnDefinition>
     </Grid.ColumnDefinitions>
     <ffSvg:SvgCachedImage x:Name="ButtonIcon" Grid.Column="0" Source="{Binding SvgIconSource, Source={x:Reference This}}"
-                          Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="14"></ffSvg:SvgCachedImage>
-    <Label LineBreakMode="NoWrap" Grid.Column="1" Text="{Binding Text, Source={x:Reference This}}"  
+                          Margin="10,0,0,0" VerticalOptions="Center" HorizontalOptions="Center" 
+                          HeightRequest="{Binding SvgIconHeight, Source={x:Reference This}}"></ffSvg:SvgCachedImage>
+    <Label  x:Name="ButtonText" LineBreakMode="NoWrap" Grid.Column="1" Text="{Binding Text, Source={x:Reference This}}"  
                    TextColor="{Binding TextColor, Source={x:Reference This}}"
+                   FontSize="{Binding FontSize, Source={x:Reference This}}"
+                   HorizontalOptions="StartAndExpand"
                    HorizontalTextAlignment="{Binding HorizontalTextAlignment, Source={x:Reference This}}" 
                    VerticalTextAlignment= "{Binding VerticalTextAlignment, Source={x:Reference This}}" 
            Margin="0,0,10,0"    />

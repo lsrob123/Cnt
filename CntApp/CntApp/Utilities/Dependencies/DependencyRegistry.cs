@@ -1,5 +1,6 @@
 ﻿using CntApp.Domains.Contacts;
 using CntApp.Domains.Home;
+using CntApp.Domains.MyProfile;
 using CntApp.Domains.NavigationBar;
 using CntApp.Utilities.DB;
 using CntApp.Utilities.Files;
@@ -19,10 +20,24 @@ namespace CntApp.Utilities.Dependencies
         public static HomePage HomePage => new HomePage(LocalStateStore);
         public static ContactsPage ContactsPage => new ContactsPage();
 
+        public static MyProfileViewModel MyProfileViewModel { get; private set; }
+
         public static void Init()
         {
             LocalDb = new LocalDb(FilePathResolver);
-            LocalStateStore = new LocalStateStore(LocalDb);
+
+            MyProfileViewModel = new MyProfileViewModel
+            {
+                ImageFilePath = FilePathResolver.MyProfileImagePath,
+#if DEBUG
+                FullName = "Linda Jones",
+                Nickname = "Linee The Queen",
+                Mobile = "0412 345 678",
+                Email = "linda.jones@deepen-tech.com"
+#endif
+            };
+
+            LocalStateStore = new LocalStateStore();
         }
 
         public static NavigationPage ResolveDetailPage(string detailPageName)

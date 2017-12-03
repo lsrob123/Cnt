@@ -14,6 +14,8 @@ namespace CntApp.Master
         {
             InitializeComponent();
 
+            Master = new StartingMaster(DependencyRegistry.LocalStateStore);
+
             OpenDetailPage(new OpenDetailPageMessage(nameof(HomePage)));
 
             MessagingCenter.Subscribe<StartingMaster, OpenDetailPageMessage>(this, nameof(OpenDetailPageMessage),

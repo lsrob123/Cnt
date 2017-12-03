@@ -6,6 +6,9 @@
              x:Class="CntApp.App">
     <Application.Resources>
         <ResourceDictionary>
+            <Color x:Key="NormalTextBlack">Black</Color>
+            <Color x:Key="NormalTextWhite">White</Color>
+            <Color x:Key="NormalTextLightGray">#c0c0c0</Color>
             <Color x:Key="BarBackground">#203050</Color>
             <Color x:Key="FooterBarBackground">#203050</Color>
             <Color x:Key="BarText">White</Color>
@@ -18,10 +21,12 @@
             <Color x:Key="ButtonPurple">#6030b0</Color>
             <Color x:Key="ButtonBlueGreen">#065050</Color>
             <Color x:Key="ButtonText">White</Color>
+            <Color x:Key="CommonDetailPageBackground">#e0e0e0</Color>
 
             <Style x:Key="MasterPanel" TargetType="ContentPage">
                 <Setter Property="BackgroundColor" Value="{DynamicResource PanelBackground}"></Setter>
             </Style>
+         
             <Style x:Key="MasterButton" TargetType="controls:ButtonControl">
                 <Setter Property="BackgroundColor" Value="{DynamicResource ButtonBlue}"></Setter>
                 <Setter Property="TextColor" Value="{DynamicResource ButtonText}"></Setter>
@@ -30,13 +35,28 @@
                 <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
             </Style>
+
+            <Style x:Key="MasterButtonSmall" TargetType="controls:ButtonControl">
+                <Setter Property="BackgroundColor" Value="{DynamicResource ButtonBlue}"></Setter>
+                <Setter Property="TextColor" Value="{DynamicResource ButtonText}"></Setter>
+                <Setter Property="HeightRequest" Value="20"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Start"></Setter>
+                <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+            </Style>
+
             <Style x:Key="FooterBar" TargetType="StackLayout">
                 <Setter Property="BackgroundColor" Value="{DynamicResource FooterBarBackground}"></Setter>
                 <Setter Property="HeightRequest" Value="50"></Setter>
             </Style>
 
+            <Style x:Key="MyProfileViewText" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource NormalTextLightGray }"></Setter>
+                <Setter Property="FontSize" Value="10"></Setter>
+            </Style>
+
             <ControlTemplate x:Key="CommonDetailPageTemplate">
-                <Grid>
+                <Grid BackgroundColor="{DynamicResource CommonDetailPageBackground}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*">
                         </RowDefinition>
