@@ -1,7 +1,9 @@
 ﻿using CntApp.Master;
 using CntApp.Utilities.Dependencies;
-using CntApp.Utilities.Reflection;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
 namespace CntApp
 {

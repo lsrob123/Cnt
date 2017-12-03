@@ -29,11 +29,11 @@
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Label FontSize="9" HorizontalOptions="Start" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding FullName}" 
+                <Label FontSize="11" HorizontalOptions="Start" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding FullName}" 
                        Style="{DynamicResource MyProfileViewText}"></Label>
-                <Label FontSize="12" HorizontalOptions="Start" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Nickname}" 
+                <Label FontSize="14" HorizontalOptions="Start" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Nickname}" 
                        Style="{DynamicResource MyProfileViewText }"></Label>
                 <ffSvg:SvgCachedImage Margin="0,5,5,0" Grid.Column="0" Grid.Row="2" 
                                       Source="resource://CntApp.Images.mobile-white.svg"
@@ -45,9 +45,9 @@
                                 VerticalOptions="Center" HorizontalOptions="Start" HeightRequest="12"></ffSvg:SvgCachedImage>
                 <Label HorizontalOptions="Start" VerticalOptions="Center" Margin="0,4,0,0" Grid.Column="1" Grid.Row="3" 
                        Text="{Binding Email}" Style="{DynamicResource MyProfileViewText}"></Label>
-                <ffSvg:SvgCachedImage Margin="0,5,5,0" Grid.Column="1" Grid.Row="4" 
+                <ffSvg:SvgCachedImage Margin="0,0,5,10" Grid.Column="1" Grid.Row="4" 
                                       Source="resource://CntApp.Images.edit-white.svg"
-                                      VerticalOptions="Center" HorizontalOptions="End" HeightRequest="14"></ffSvg:SvgCachedImage>
+                                      VerticalOptions="End" HorizontalOptions="End" HeightRequest="14"></ffSvg:SvgCachedImage>
             </Grid>
         </Grid>
     </ContentView.Content>

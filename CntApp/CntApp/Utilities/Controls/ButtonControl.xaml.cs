@@ -24,7 +24,7 @@ namespace CntApp.Utilities.Controls
             BindableProperty.Create(nameof(SvgIconSource), typeof(string), typeof(ButtonControl));
 
         public static readonly BindableProperty FontSizeProperty =
-            BindableProperty.Create(nameof(FontSize), typeof(int), typeof(ButtonControl), 12);
+            BindableProperty.Create(nameof(FontSize), typeof(int), typeof(ButtonControl), 14);
 
         public static readonly BindableProperty SvgIconHeightProperty =
             BindableProperty.Create(nameof(SvgIconHeight), typeof(int), typeof(ButtonControl), 14);

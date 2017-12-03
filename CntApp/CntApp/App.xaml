@@ -21,7 +21,7 @@
             <Color x:Key="ButtonPurple">#6030b0</Color>
             <Color x:Key="ButtonBlueGreen">#065050</Color>
             <Color x:Key="ButtonText">White</Color>
-            <Color x:Key="CommonDetailPageBackground">#e0e0e0</Color>
+            <Color x:Key="CommonDetailPageBackground">White</Color>
 
             <Style x:Key="MasterPanel" TargetType="ContentPage">
                 <Setter Property="BackgroundColor" Value="{DynamicResource PanelBackground}"></Setter>
@@ -47,12 +47,12 @@
 
             <Style x:Key="FooterBar" TargetType="StackLayout">
                 <Setter Property="BackgroundColor" Value="{DynamicResource FooterBarBackground}"></Setter>
-                <Setter Property="HeightRequest" Value="50"></Setter>
+                <Setter Property="HeightRequest" Value="60"></Setter>
             </Style>
 
             <Style x:Key="MyProfileViewText" TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource NormalTextLightGray }"></Setter>
-                <Setter Property="FontSize" Value="10"></Setter>
+                <Setter Property="FontSize" Value="12"></Setter>
             </Style>
 
             <ControlTemplate x:Key="CommonDetailPageTemplate">
