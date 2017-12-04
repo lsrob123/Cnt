@@ -63,7 +63,11 @@
                         <RowDefinition Height="50">
                         </RowDefinition>
                     </Grid.RowDefinitions>
-                    <ContentPresenter Grid.Row="0" Padding="10"></ContentPresenter>
+                    <ScrollView Grid.Row="0" Orientation="Vertical" Padding="0,0,0,500">
+                        <ScrollView.Content>
+                            <ContentPresenter Padding="10"></ContentPresenter>
+                        </ScrollView.Content>
+                    </ScrollView>
                     <footers:FooterBar Grid.Row="1"></footers:FooterBar>
                 </Grid>
             </ControlTemplate>
