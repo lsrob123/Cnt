@@ -29,18 +29,28 @@
                 <TapGestureRecognizer Tapped="HomeTapped"></TapGestureRecognizer>
             </controls:ButtonControl.GestureRecognizers>
         </controls:ButtonControl>
-        <controls:ButtonControl x:Name="BtnManageContacts" SvgIconSource="resource://CntApp.Images.contacts-white.svg" Grid.Row="2" Text="Contacts" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonOrange}">
+        <controls:ButtonControl x:Name="BtnContacts" SvgIconSource="resource://CntApp.Images.contacts-white.svg" 
+                                Grid.Row="2" Text="Contacts" Style="{DynamicResource MasterButton}" 
+                                BackgroundColor="{DynamicResource ButtonOrange}">
             <controls:ButtonControl.GestureRecognizers>
                 <TapGestureRecognizer Tapped="ContactsTapped"></TapGestureRecognizer>
             </controls:ButtonControl.GestureRecognizers>
         </controls:ButtonControl>
-        <controls:ButtonControl x:Name="BtnManageCircles" SvgIconSource="resource://CntApp.Images.social-circle-white.svg" Grid.Row="3" Text="Social Circles" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonGreen}">
+        <controls:ButtonControl x:Name="BtnCircles" SvgIconSource="resource://CntApp.Images.social-circle-white.svg" 
+                                Grid.Row="3" Text="Social Circles" Style="{DynamicResource MasterButton}" 
+                                BackgroundColor="{DynamicResource ButtonGreen}">
         </controls:ButtonControl>
-        <controls:ButtonControl  SvgIconSource="resource://CntApp.Images.team.svg" Grid.Row="4" Text="Teams" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonPink}">
+        <controls:ButtonControl x:Name="BtnTeams"  SvgIconSource="resource://CntApp.Images.team.svg" 
+                                 Grid.Row="4" Text="Teams" Style="{DynamicResource MasterButton}" 
+                                 BackgroundColor="{DynamicResource ButtonPink}">
         </controls:ButtonControl>
-        <controls:ButtonControl  SvgIconSource="resource://CntApp.Images.calendar-white.svg" Grid.Row="5" Text="Events" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonBlueGreen}">
+        <controls:ButtonControl x:Name="BtnEvents"  SvgIconSource="resource://CntApp.Images.calendar-white.svg" 
+                                 Grid.Row="5" Text="Events" Style="{DynamicResource MasterButton}" 
+                                 BackgroundColor="{DynamicResource ButtonBlueGreen}">
         </controls:ButtonControl>
-        <controls:ButtonControl  SvgIconSource="resource://CntApp.Images.settings-white.svg" Grid.Row="6" Text="Settings" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonPurple}">
+        <controls:ButtonControl x:Name="BtnSettings"  SvgIconSource="resource://CntApp.Images.settings-white.svg" 
+                                 Grid.Row="6" Text="Settings" Style="{DynamicResource MasterButton}" 
+                                 BackgroundColor="{DynamicResource ButtonPurple}">
         </controls:ButtonControl>
     </Grid>
 </ContentPage>
