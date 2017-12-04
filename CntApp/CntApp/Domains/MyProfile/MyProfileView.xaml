@@ -37,11 +37,10 @@
                 </StackLayout>
 
                 <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
-                    <Label LineBreakMode="CharacterWrap" FontSize="14" 
+                    <Label LineBreakMode="CharacterWrap" FontSize="14"
                        HorizontalOptions="StartAndExpand" VerticalOptions="Center"
                        Text="{Binding Nickname}" Style="{DynamicResource MyProfileViewText }"></Label>
                 </StackLayout>
-
 
                 <ffSvg:SvgCachedImage Margin="1,5,0,0" Grid.Column="0" Grid.Row="2" 
                                       Source="resource://CntApp.Images.mobile-white.svg"

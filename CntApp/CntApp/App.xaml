@@ -8,6 +8,7 @@
         <ResourceDictionary>
             <Color x:Key="NormalTextBlack">Black</Color>
             <Color x:Key="NormalTextWhite">White</Color>
+            <Color x:Key="NormalTextWheat">Wheat</Color>
             <Color x:Key="NormalTextLightGray">#c0c0c0</Color>
             <Color x:Key="BarBackground">#203050</Color>
             <Color x:Key="FooterBarBackground">#203050</Color>

@@ -23,7 +23,8 @@
                                      HorizontalOptions="StartAndExpand" Margin="4,2,12,3">
             </myProfile:MyProfileView>
         </StackLayout>
-        <controls:ButtonControl x:Name="BtnHome" SvgIconSource="resource://CntApp.Images.home-white.svg" Grid.Row="1" Text="Home" Style="{DynamicResource MasterButton}">
+        <controls:ButtonControl x:Name="BtnHome" SvgIconSource="resource://CntApp.Images.home-white.svg" Grid.Row="1" 
+                                Text="Home" Style="{DynamicResource MasterButton}">
             <controls:ButtonControl.GestureRecognizers>
                 <TapGestureRecognizer Tapped="HomeTapped"></TapGestureRecognizer>
             </controls:ButtonControl.GestureRecognizers>

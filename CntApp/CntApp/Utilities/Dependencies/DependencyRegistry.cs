@@ -31,7 +31,7 @@ namespace CntApp.Utilities.Dependencies
                 ImageFilePath = FilePathResolver.MyProfileImagePath,
 #if DEBUG
                 FullName = "Linda Jones",
-                Nickname = "Linee The Queen",
+                Nickname = "The Queen",
                 Mobile = "0412 345 678",
                 Email = "linda.jones@deepentech.com"
 #endif
