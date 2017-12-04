@@ -69,13 +69,11 @@
     <Compile Include="Utilities\DB\ILocalDb.cs" />
     <Compile Include="Utilities\DB\LocalDb.cs" />
     <Compile Include="Utilities\Dependencies\DependencyRegistry.cs" />
-    <Compile Include="Utilities\Extension\ContentPageExtensions.cs" />
     <Compile Include="Utilities\Extension\ImageResourceExtension.cs" />
     <Compile Include="Utilities\Files\FilePathResolverBase.cs" />
     <Compile Include="Utilities\Files\IFilePathResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\Messages\IMessageBase.cs" />
-    <Compile Include="Utilities\Messages\LogOutMessage.cs" />
     <Compile Include="Utilities\Messages\MessageBase.cs" />
     <Compile Include="Utilities\Messages\OpenDetailPageMessage.cs" />
     <Compile Include="Utilities\Reflection\ReflectionHelper.cs" />
