@@ -33,7 +33,7 @@ namespace CntApp.Utilities.Dependencies
                 FullName = "Linda Jones",
                 Nickname = "Linee The Queen",
                 Mobile = "0412 345 678",
-                Email = "linda.jones@deepen-tech.com"
+                Email = "linda.jones@deepentech.com"
 #endif
             };
 

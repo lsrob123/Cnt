@@ -4,12 +4,10 @@
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
-            xmlns:controls="clr-namespace:CntApp.Utilities.Controls;assembly=CntApp"
-            x:Class="CntApp.Domains.MyProfile.MyProfileView">
+             x:Class="CntApp.Domains.MyProfile.MyProfileView">
     <ContentView.Content>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
@@ -31,23 +29,51 @@
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Label FontSize="11" HorizontalOptions="Start" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding FullName}" 
-                       Style="{DynamicResource MyProfileViewText}"></Label>
-                <Label FontSize="14" HorizontalOptions="Start" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Nickname}" 
-                       Style="{DynamicResource MyProfileViewText }"></Label>
-                <ffSvg:SvgCachedImage Margin="0,5,5,0" Grid.Column="0" Grid.Row="2" 
+
+                <StackLayout Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+                    <Label LineBreakMode="CharacterWrap" FontSize="11" 
+                       HorizontalOptions="StartAndExpand" VerticalOptions="Center" 
+                       Text="{Binding FullName}" Style="{DynamicResource MyProfileViewText}"></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+                    <Label LineBreakMode="CharacterWrap" FontSize="14" 
+                       HorizontalOptions="StartAndExpand" VerticalOptions="Center"
+                       Text="{Binding Nickname}" Style="{DynamicResource MyProfileViewText }"></Label>
+                </StackLayout>
+
+
+                <ffSvg:SvgCachedImage Margin="0,5,0,0" Grid.Column="0" Grid.Row="2" 
                                       Source="resource://CntApp.Images.mobile-white.svg"
-                                      VerticalOptions="Center" HorizontalOptions="Start" HeightRequest="14"></ffSvg:SvgCachedImage>
-                <Label HorizontalOptions="Start" VerticalOptions="Center" Margin="0,4,0,0" Grid.Column="1" Grid.Row="2" 
-                       Text="{Binding Mobile}" Style="{DynamicResource MyProfileViewText}"></Label>
-                <ffSvg:SvgCachedImage Margin="0,2,2,0" Grid.Column="0" Grid.Row="3" 
+                                      VerticalOptions="Center" HorizontalOptions="StartAndExpand" HeightRequest="14">
+
+                </ffSvg:SvgCachedImage>
+
+                <StackLayout Grid.Column="1" Grid.Row="2">
+                    <Label LineBreakMode="CharacterWrap" 
+                       HorizontalOptions="StartAndExpand" VerticalOptions="Center" 
+                       Margin="0,4,0,0" Text="{Binding Mobile}" 
+                       Style="{DynamicResource MyProfileViewText}"></Label>
+                </StackLayout>
+
+                <ffSvg:SvgCachedImage Margin="0,2,5,0" Grid.Column="0" Grid.Row="3" 
                                 Source="resource://CntApp.Images.email-white.svg"
-                                VerticalOptions="Center" HorizontalOptions="Start" HeightRequest="12"></ffSvg:SvgCachedImage>
-                <Label HorizontalOptions="Start" VerticalOptions="Center" Margin="0,4,0,0" Grid.Column="1" Grid.Row="3" 
+                                VerticalOptions="Center" HorizontalOptions="StartAndExpand" HeightRequest="12">
+
+                </ffSvg:SvgCachedImage>
+
+                <StackLayout Grid.Column="1" Grid.Row="3">
+                    <Label LineBreakMode="CharacterWrap" 
+                       HorizontalOptions="StartAndExpand" VerticalOptions="Center" 
+                       Margin="0,4,0,0" 
                        Text="{Binding Email}" Style="{DynamicResource MyProfileViewText}"></Label>
-                <ffSvg:SvgCachedImage Margin="0,0,5,10" Grid.Column="1" Grid.Row="4" 
+                </StackLayout>
+
+                <ffSvg:SvgCachedImage Margin="0,0,0,10" Grid.Column="1" Grid.Row="4" 
                                       Source="resource://CntApp.Images.edit-white.svg"
-                                      VerticalOptions="End" HorizontalOptions="End" HeightRequest="14"></ffSvg:SvgCachedImage>
+                                      VerticalOptions="Center" HorizontalOptions="End" HeightRequest="14">
+
+                </ffSvg:SvgCachedImage>
             </Grid>
         </Grid>
     </ContentView.Content>
