@@ -2,16 +2,15 @@
 <Grid xmlns="http://xamarin.com/schemas/2014/forms" 
       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
       x:Class="CntApp.Utilities.Controls.FooterButtonControl" x:Name="This"
-      xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms" Margin="0,3,0,0">
+      xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms" Margin="0,8,0,0" RowSpacing="0">
     <Grid.RowDefinitions>
-        <RowDefinition Height="*"></RowDefinition>
         <RowDefinition Height="Auto"></RowDefinition>
         <RowDefinition Height="Auto"></RowDefinition>
         <RowDefinition Height="*"></RowDefinition>
     </Grid.RowDefinitions>
-    <ffSvg:SvgCachedImage x:Name="ButtonIcon" Grid.Row="1" Source="{Binding SvgIconSource, Source={x:Reference This}}"
+    <ffSvg:SvgCachedImage x:Name="ButtonIcon" Grid.Row="0" Source="{Binding SvgIconSource, Source={x:Reference This}}"
                           HorizontalOptions="Center" HeightRequest="14"></ffSvg:SvgCachedImage>
-    <Label Grid.Row="2" Text="{Binding Text, Source={x:Reference This}}"   VerticalTextAlignment="Start" VerticalOptions="Start"
+    <Label Grid.Row="1" Text="{Binding Text, Source={x:Reference This}}"   VerticalTextAlignment="Start" VerticalOptions="Start"
            TextColor="{Binding TextColor, Source={x:Reference This}}" FontSize="12"
            HorizontalTextAlignment="Center"   />
 </Grid>

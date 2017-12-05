@@ -15,6 +15,8 @@
         /// <returns>string.Format(pattern, fileName)</returns>
         protected string Compose(string pattern, string fileName)
         {
+            
+
             return string.Format(pattern, fileName);
         }
     }

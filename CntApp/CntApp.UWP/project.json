@@ -1,6 +1,6 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.2",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.4",
     "SkiaSharp": "1.59.2",
     "sqlite-net-pcl": "1.5.166-beta",
     "Xamarin.FFImageLoading": "2.2.25",

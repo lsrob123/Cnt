@@ -17,6 +17,6 @@
     </controls:FooterButtonControl>
     <controls:FooterButtonControl  SvgIconSource="resource://CntApp.Images.calendar-new-white.svg" Text="Events" 
                                    Grid.Column="1"></controls:FooterButtonControl>
-    <controls:FooterButtonControl  SvgIconSource="resource://CntApp.Images.message-new-white.svg" Text="Cloud Messages" 
+    <controls:FooterButtonControl  SvgIconSource="resource://CntApp.Images.message-new-white.svg" Text="Messages" 
                                    Grid.Column="2"></controls:FooterButtonControl>
 </Grid>

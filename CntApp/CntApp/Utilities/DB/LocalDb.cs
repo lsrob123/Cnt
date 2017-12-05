@@ -1,5 +1,6 @@
 ﻿using CntApp.Utilities.Files;
 using SQLite;
+using System.IO;
 
 namespace CntApp.Utilities.DB
 {
@@ -10,7 +11,10 @@ namespace CntApp.Utilities.DB
         public LocalDb(IFilePathResolver filePathResolver)
         {
             var dbFilePath = filePathResolver.GetSqliteDbFilePath(nameof(LocalDb));
+
             _db = new SQLiteAsyncConnection(dbFilePath);
+
+
         }
     }
 }
