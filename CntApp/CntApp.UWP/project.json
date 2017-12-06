@@ -8,10 +8,10 @@
     "Xamarin.FFImageLoading.Svg": "2.2.25",
     "Xamarin.FFImageLoading.Svg.Forms": "2.2.25",
     "Xamarin.FFImageLoading.Transformations": "2.2.25",
-    "Xamarin.Forms": "2.5.0.91635"
+    "Xamarin.Forms": "2.5.0.121934"
   },
   "frameworks": {
-    "uap10.0.15063": {}
+    "uap10.0.16299": {}
   },
   "runtimes": {
     "win10-arm": {},
