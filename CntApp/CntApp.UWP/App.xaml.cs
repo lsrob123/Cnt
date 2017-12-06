@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Reflection;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Contacts;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
 using FFImageLoading.Forms;
@@ -37,11 +38,9 @@ namespace CntApp.UWP {
                 DebugSettings.EnableFrameRateCounter = true;
 #endif
 
-            var rootFrame = Window.Current.Content as Frame;
-
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
-            if (rootFrame == null) {
+            if (!(Window.Current.Content is Frame rootFrame)) {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
 
@@ -49,7 +48,8 @@ namespace CntApp.UWP {
 
                 var assembliesToInclude = new List<Assembly> {
                     typeof(CachedImage).GetTypeInfo().Assembly,
-                    typeof(CachedImageRenderer).GetTypeInfo().Assembly
+                    typeof(CachedImageRenderer).GetTypeInfo().Assembly,
+                    typeof (ContactManager).GetTypeInfo().Assembly
                 };
                 Forms.Init(e, assembliesToInclude);
 
