@@ -32,8 +32,6 @@ namespace CntApp.Utilities.Controls
         public ButtonControl()
         {
             InitializeComponent();
-
-            
         }
 
         public string Text
