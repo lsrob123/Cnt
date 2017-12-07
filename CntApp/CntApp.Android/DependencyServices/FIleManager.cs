@@ -6,22 +6,23 @@ using Xamarin.Forms;
 
 [assembly: Dependency(typeof(FIleManager))]
 
-namespace CntApp.Droid.DependencyServices
-{
-    public class FIleManager : FilePathResolverBase
-    {
+namespace CntApp.Droid.DependencyServices {
+    public class FIleManager : FilePathResolverBase {
         public override string MyProfileImagePath => DefaultProfileImageFileName;
 
-        public override string GetToolbarItemIconPath(string iconFileName)
-        {
+        public override string ApplicationDataFolder =>
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+        public override string PersonalFolder =>
+            Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+
+        public override string GetToolbarItemIconPath(string iconFileName) {
             var path = Compose("{0}", iconFileName);
             return path;
         }
 
-        public override string GetSqliteDbFilePath(string dbFileName)
-        {
-            var path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            return Path.Combine(path, dbFileName);
+        public override bool FileExists(string filePath) {
+            return File.Exists(filePath);
         }
     }
 }

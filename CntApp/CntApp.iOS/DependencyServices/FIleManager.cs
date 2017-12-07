@@ -6,27 +6,23 @@ using Xamarin.Forms;
 
 [assembly: Dependency(typeof(FIleManager))]
 
-namespace CntApp.iOS.DependencyServices
-{
-    public class FIleManager : FilePathResolverBase
-    {
+namespace CntApp.iOS.DependencyServices {
+    public class FIleManager : FilePathResolverBase {
         public override string MyProfileImagePath => $"myprofile/{DefaultProfileImageFileName}";
 
-        public override string GetToolbarItemIconPath(string iconFileName)
-        {
+        public override string ApplicationDataFolder =>
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+        public override string PersonalFolder =>
+            Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+
+        public override string GetToolbarItemIconPath(string iconFileName) {
             var path = Compose("{0}", iconFileName);
             return path;
         }
 
-        public override string GetSqliteDbFilePath(string dbFileName)
-        {
-            var docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            var libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
-
-            if (!Directory.Exists(libFolder))
-                Directory.CreateDirectory(libFolder);
-
-            return Path.Combine(libFolder, dbFileName);
+        public override bool FileExists(string filePath) {
+            return File.Exists(filePath);
         }
     }
 }
