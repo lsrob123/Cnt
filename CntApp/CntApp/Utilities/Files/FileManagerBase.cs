@@ -1,6 +1,6 @@
 ﻿namespace CntApp.Utilities.Files
 {
-    public abstract class FilePathResolverBase : IFilePathResolver
+    public abstract class FilePathResolverBase : IFileManager
     {
         public const string DefaultProfileImageFileName = "myprofile.jpg";
         public abstract string MyProfileImagePath { get; }

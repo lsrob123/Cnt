@@ -8,7 +8,7 @@ namespace CntApp.Utilities.DB
     {
         private readonly SQLiteAsyncConnection _db;
 
-        public LocalDb(IFilePathResolver filePathResolver)
+        public LocalDb(IFileManager filePathResolver)
         {
             var dbFilePath = filePathResolver.GetSqliteDbFilePath(nameof(LocalDb));
 

@@ -3,11 +3,11 @@ using CntApp.Utilities.Files;
 using CntApp.UWP.DependencyServices;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(FilePathResolver))]
+[assembly: Dependency(typeof(FIleManager))]
 
 namespace CntApp.UWP.DependencyServices
 {
-    public class FilePathResolver : FilePathResolverBase
+    public class FIleManager : FilePathResolverBase
     {
         public override string MyProfileImagePath => Compose(@"/Assets/MyProfile/{0}", DefaultProfileImageFileName);
 

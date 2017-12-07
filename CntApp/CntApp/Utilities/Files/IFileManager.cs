@@ -1,6 +1,6 @@
 ﻿namespace CntApp.Utilities.Files
 {
-    public interface IFilePathResolver
+    public interface IFileManager
     {
         string MyProfileImagePath { get; }
         string GetToolbarItemIconPath(string iconFileName);

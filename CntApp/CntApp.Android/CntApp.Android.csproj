@@ -174,7 +174,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DependencyServices\FilePathResolver.cs" />
+    <Compile Include="DependencyServices\FIleManager.cs" />
     <Compile Include="DependencyServices\NavigationBarStyler.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />

@@ -14,7 +14,7 @@ namespace CntApp.Utilities.Dependencies
         public static ILocalDb LocalDb { get; private set; }
         public static ILocalStateStore LocalStateStore { get; private set; }
 
-        public static IFilePathResolver FilePathResolver => DependencyService.Get<IFilePathResolver>();
+        public static IFileManager FilePathResolver => DependencyService.Get<IFileManager>();
         public static INavigationBarStyler NavigationBarStyler => DependencyService.Get<INavigationBarStyler>();
 
         public static HomePage HomePage => new HomePage(LocalStateStore);

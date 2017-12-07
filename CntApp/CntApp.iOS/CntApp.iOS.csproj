@@ -89,7 +89,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DependencyServices\FilePathResolver.cs" />
+    <Compile Include="DependencyServices\FIleManager.cs" />
     <Compile Include="DependencyServices\NavigationBarStyler.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />

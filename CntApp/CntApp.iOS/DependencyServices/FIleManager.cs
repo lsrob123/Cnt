@@ -4,11 +4,11 @@ using CntApp.iOS.DependencyServices;
 using CntApp.Utilities.Files;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(FilePathResolver))]
+[assembly: Dependency(typeof(FIleManager))]
 
 namespace CntApp.iOS.DependencyServices
 {
-    public class FilePathResolver : FilePathResolverBase
+    public class FIleManager : FilePathResolverBase
     {
         public override string MyProfileImagePath => $"myprofile/{DefaultProfileImageFileName}";
 
