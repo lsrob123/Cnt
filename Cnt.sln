@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CntApp.Android", "CntApp\CntApp.Android\CntApp.Android.csproj", "{287F3C97-3FC2-4A80-8551-83DE33E14F06}"
 EndProject
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CntApp.UWP", "CntApp\CntApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CntApp.iOS", "CntApp\CntApp.iOS\CntApp.iOS.csproj", "{88AD7497-FB07-4DBD-9EE9-76D2B941C657}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Utilities", "_Utilities", "{BD927FE8-2300-4D8F-9AB5-0B61A61379BA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{08CC5C63-2530-4CD6-90B5-88FA0AD5E211}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -256,6 +256,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{287F3C97-3FC2-4A80-8551-83DE33E14F06} = {08CC5C63-2530-4CD6-90B5-88FA0AD5E211}
+		{C30969BA-7077-4630-95FD-A28AE72FDE68} = {08CC5C63-2530-4CD6-90B5-88FA0AD5E211}
+		{FC09E486-F70E-4840-B5EE-E9C164960381} = {08CC5C63-2530-4CD6-90B5-88FA0AD5E211}
+		{88AD7497-FB07-4DBD-9EE9-76D2B941C657} = {08CC5C63-2530-4CD6-90B5-88FA0AD5E211}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C13897DD-35A2-416B-9880-0F457288B419}

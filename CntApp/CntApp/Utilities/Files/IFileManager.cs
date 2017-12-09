@@ -7,6 +7,7 @@
         string GetToolbarItemIconPath(string iconFileName);
         string GetSqliteDbFilePath(string dbFileName);
         bool FileExists(string filePath);
+        void DeleteFile(string filePath);
         string ApplicationDataFolder { get; }
         string PersonalFolder { get; }
     }

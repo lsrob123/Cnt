@@ -10,6 +10,11 @@ namespace CntApp.UWP.DependencyServices {
     public class FIleManager : FilePathResolverBase {
         public override string MyProfileImagePath => Compose(@"/Assets/MyProfile/{0}", DefaultProfileImageFileName);
 
+        public override void DeleteFile(string filePath)
+        {
+            File.Delete(filePath);
+        }
+
         public override string ApplicationDataFolder =>
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 

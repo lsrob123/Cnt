@@ -3,6 +3,7 @@ using CntApp.Domains.Home;
 using CntApp.Domains.MyProfile;
 using CntApp.Domains.NavigationBar;
 using CntApp.Utilities.DB;
+using CntApp.Utilities.DB.Migrations;
 using CntApp.Utilities.Files;
 using CntApp.Utilities.States;
 using Xamarin.Forms;
@@ -11,10 +12,11 @@ namespace CntApp.Utilities.Dependencies
 {
     public static class DependencyRegistry
     {
+        public static DbConfigurations DbConfigurations { get; private set; }
         public static ILocalDb LocalDb { get; private set; }
         public static ILocalStateStore LocalStateStore { get; private set; }
 
-        public static IFileManager FilePathResolver => DependencyService.Get<IFileManager>();
+        public static IFileManager FileManager => DependencyService.Get<IFileManager>();
         public static INavigationBarStyler NavigationBarStyler => DependencyService.Get<INavigationBarStyler>();
 
         public static HomePage HomePage => new HomePage(LocalStateStore);
@@ -24,11 +26,12 @@ namespace CntApp.Utilities.Dependencies
 
         public static void Init()
         {
-            LocalDb = new LocalDb(FilePathResolver);
+            DbConfigurations = new DbConfigurations(FileManager);
+            LocalDb = new LocalDb(DbConfigurations);
 
             MyProfileViewModel = new MyProfileViewModel
             {
-                ImageFilePath = FilePathResolver.MyProfileImagePath,
+                ImageFilePath = FileManager.MyProfileImagePath,
 #if DEBUG
                 FullName = "Linda Jones",
                 Nickname = "The Queen",

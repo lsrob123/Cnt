@@ -10,6 +10,11 @@ namespace CntApp.iOS.DependencyServices {
     public class FIleManager : FilePathResolverBase {
         public override string MyProfileImagePath => $"myprofile/{DefaultProfileImageFileName}";
 
+        public override void DeleteFile(string filePath)
+        {
+            File.Delete(filePath);
+        }
+
         public override string ApplicationDataFolder =>
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 

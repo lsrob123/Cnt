@@ -66,6 +66,11 @@
     <Compile Include="Utilities\Controls\FooterButtonControl.xaml.cs">
       <DependentUpon>FooterButtonControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\DB\Migrations\DbMigrationHistoryItem.cs" />
+    <Compile Include="Utilities\DB\Migrations\IDbMigrationHistoryItem.cs" />
+    <Compile Include="Utilities\DB\Migrations\_20171209_Created.cs" />
+    <Compile Include="Utilities\DB\Migrations\DbMigrationBase.cs" />
+    <Compile Include="Utilities\DB\Migrations\DbConfigurations.cs" />
     <Compile Include="Utilities\DB\ILocalDb.cs" />
     <Compile Include="Utilities\DB\LocalDb.cs" />
     <Compile Include="Utilities\Dependencies\DependencyRegistry.cs" />
@@ -73,6 +78,10 @@
     <Compile Include="Utilities\Files\FileManagerBase.cs" />
     <Compile Include="Utilities\Files\IFileManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Infrastructure\Enumeration.cs" />
+    <Compile Include="Utilities\Infrastructure\ForbiddenException.cs" />
+    <Compile Include="Utilities\Infrastructure\ProcessResult.cs" />
+    <Compile Include="Utilities\Infrastructure\ProcessResultType.cs" />
     <Compile Include="Utilities\Messages\IMessageBase.cs" />
     <Compile Include="Utilities\Messages\MessageBase.cs" />
     <Compile Include="Utilities\Messages\OpenDetailPageMessage.cs" />

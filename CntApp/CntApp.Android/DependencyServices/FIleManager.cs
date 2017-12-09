@@ -10,6 +10,11 @@ namespace CntApp.Droid.DependencyServices {
     public class FIleManager : FilePathResolverBase {
         public override string MyProfileImagePath => DefaultProfileImageFileName;
 
+        public override void DeleteFile(string filePath)
+        {
+           File.Delete(filePath);
+        }
+
         public override string ApplicationDataFolder =>
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 

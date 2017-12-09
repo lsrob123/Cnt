@@ -1,20 +1,17 @@
 ﻿using CntApp.Utilities.Files;
 using SQLite;
 using System.IO;
+using CntApp.Utilities.DB.Migrations;
 
 namespace CntApp.Utilities.DB
 {
     public class LocalDb : ILocalDb
     {
-        private readonly SQLiteAsyncConnection _db;
+        private readonly SQLiteAsyncConnection _dbConnection;
 
-        public LocalDb(IFileManager filePathResolver)
+        public LocalDb(DbConfigurations configurations)
         {
-            var dbFilePath = filePathResolver.GetSqliteDbFilePath(nameof(LocalDb));
-
-            _db = new SQLiteAsyncConnection(dbFilePath);
-
-
+            _dbConnection = configurations.DbConnection;
         }
     }
 }
