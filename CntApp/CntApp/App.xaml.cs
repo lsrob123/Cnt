@@ -1,5 +1,6 @@
 ﻿using CntApp.Master;
 using CntApp.Utilities.Dependencies;
+using CntApp.Utilities.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,7 +18,7 @@ namespace CntApp
 
             MainPage = new Starting();
 
-            //var embeddedResources = new ReflectionHelper().ListAllEmbeddedResources();
+            var embeddedResources = new ReflectionHelper().ListAllEmbeddedResources();
         }
 
         protected override void OnStart()

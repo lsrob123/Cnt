@@ -9,8 +9,8 @@
         <RowDefinition Height="*"></RowDefinition>
     </Grid.RowDefinitions>
     <ffSvg:SvgCachedImage x:Name="ButtonIcon" Grid.Row="0" Source="{Binding SvgIconSource, Source={x:Reference This}}"
-                          HorizontalOptions="Center" HeightRequest="14"></ffSvg:SvgCachedImage>
+                          HorizontalOptions="Center" HeightRequest="14" Margin="0,2,0,0"></ffSvg:SvgCachedImage>
     <Label Grid.Row="1" Text="{Binding Text, Source={x:Reference This}}"   VerticalTextAlignment="Start" VerticalOptions="Start"
            TextColor="{Binding TextColor, Source={x:Reference This}}" FontSize="12"
-           HorizontalTextAlignment="Center"   />
+           HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  LineBreakMode="NoWrap" />
 </Grid>

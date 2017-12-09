@@ -3,20 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:CntApp.Utilities.Controls;assembly=CntApp"
              x:Class="CntApp.Domains.Footers.FooterBar" Style="{DynamicResource FooterBar}">
-    
+
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*"></ColumnDefinition>
-        <ColumnDefinition Width="*"></ColumnDefinition>
+        <ColumnDefinition Width="Auto"></ColumnDefinition>
+        <ColumnDefinition Width="Auto"></ColumnDefinition>
+        <ColumnDefinition Width="Auto"></ColumnDefinition>
         <ColumnDefinition Width="*"></ColumnDefinition>
     </Grid.ColumnDefinitions>
 
-    <controls:FooterButtonControl SvgIconSource="resource://CntApp.Images.home-white.svg" Text="Home" Grid.Column="0">
+    <controls:FooterButtonControl Margin="0,8,30,0" SvgIconSource="resource://CntApp.Images.home-white.svg" Text="Home" Grid.Column="1">
         <controls:FooterButtonControl.GestureRecognizers>
             <TapGestureRecognizer Tapped="HomeTapped"></TapGestureRecognizer>
         </controls:FooterButtonControl.GestureRecognizers>
     </controls:FooterButtonControl>
-    <controls:FooterButtonControl  SvgIconSource="resource://CntApp.Images.calendar-new-white.svg" Text="Events" 
-                                   Grid.Column="1"></controls:FooterButtonControl>
-    <controls:FooterButtonControl  SvgIconSource="resource://CntApp.Images.message-new-white.svg" Text="Messages" 
+    <controls:FooterButtonControl Margin="20,8,20,0" SvgIconSource="resource://CntApp.Images.calendar-new-white.svg" Text="Events" 
                                    Grid.Column="2"></controls:FooterButtonControl>
+    <controls:FooterButtonControl Margin="30,10,0,0" SvgIconSource="resource://CntApp.Images.message-new-white.svg" Text="Messages" 
+                                   Grid.Column="3"></controls:FooterButtonControl>
 </Grid>

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using CntApp.Annotations;
+using CntApp.Utilities;
 
 namespace CntApp.Domains.MyProfile
 {

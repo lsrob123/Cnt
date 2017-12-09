@@ -12,6 +12,7 @@ namespace CntApp.Utilities.DB.Migrations
 
         public override async Task Apply(SQLiteAsyncConnection dbConnection)
         {
+            await Task.CompletedTask;
         }
     }
 }

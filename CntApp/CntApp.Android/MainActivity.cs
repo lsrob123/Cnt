@@ -5,11 +5,14 @@ using FFImageLoading.Forms.Droid;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-namespace CntApp.Droid {
-    [Activity(Label = "CntApp", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true,
+namespace CntApp.Droid
+{
+    [Activity(Label = "Circles & Teams", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : FormsAppCompatActivity {
-        protected override void OnCreate(Bundle bundle) {
+    public class MainActivity : FormsAppCompatActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 

@@ -27,7 +27,7 @@
             <Style x:Key="MasterPanel" TargetType="ContentPage">
                 <Setter Property="BackgroundColor" Value="{DynamicResource PanelBackground}"></Setter>
             </Style>
-         
+
             <Style x:Key="MasterButton" TargetType="controls:ButtonControl">
                 <Setter Property="BackgroundColor" Value="{DynamicResource ButtonBlue}"></Setter>
                 <Setter Property="TextColor" Value="{DynamicResource ButtonText}"></Setter>
