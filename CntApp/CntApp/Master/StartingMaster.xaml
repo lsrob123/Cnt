@@ -4,7 +4,7 @@
              xmlns:controls="clr-namespace:CntApp.Utilities.Controls;assembly=CntApp"
              xmlns:myProfile="clr-namespace:CntApp.Domains.MyProfile;assembly=CntApp"
              x:Class="CntApp.Master.StartingMaster"
-             Title="Main Menu" Style="{DynamicResource MasterPanel}" WidthRequest="100"
+             Title="Circles &amp; Teams" Style="{DynamicResource MasterPanel}" WidthRequest="100"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true">
     <Grid ColumnSpacing="0" RowSpacing="1" Padding="0,1,0,0">
