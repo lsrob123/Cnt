@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
+using Lx.Utilities.Contracts.Infrastructure;
 using Newtonsoft.Json;
 
-namespace CntApp.Utilities.Infrastructure
+namespace Lx.Utilities.Services.Infrastructure
 {
     public class ProcessResult
     {

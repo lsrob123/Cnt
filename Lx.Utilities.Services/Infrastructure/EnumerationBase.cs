@@ -2,36 +2,37 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using SQLite;
-using Xamarin.Forms.Internals;
 
-namespace CntApp.Utilities.Infrastructure
+namespace Lx.Utilities.Services.Infrastructure
 {
-    public abstract class Enumeration 
+    public abstract class EnumerationBase
     {
-        protected Enumeration() { }
+        protected EnumerationBase()
+        {
+        }
 
-        protected Enumeration(int value, string name)
+        protected EnumerationBase(int value, string name)
         {
             SetData(value, name);
         }
 
-        protected Enumeration(Enumeration other)
+        protected EnumerationBase(EnumerationBase other)
         {
             SetData(other.Value, other.Name);
         }
 
         public virtual int Value { get; set; }
 
-        [MaxLength(128)]
-        public virtual string Name { get; set; }
+        public abstract string Name { get; set; }
 
         public int CompareTo(object other)
         {
-            return Value.CompareTo(((Enumeration)other).Value);
+            return Value.CompareTo(((EnumerationBase) other).Value);
         }
 
-        public void AssignDefaultValuesToComplexPropertiesIfNull() { }
+        public void AssignDefaultValuesToComplexPropertiesIfNull()
+        {
+        }
 
         protected void SetData(int value, string name)
         {
@@ -39,7 +40,7 @@ namespace CntApp.Utilities.Infrastructure
             Name = name;
         }
 
-        protected void SetValueAndName(Enumeration other)
+        protected void SetValueAndName(EnumerationBase other)
         {
             SetData(other.Value, other.Name);
         }
@@ -49,7 +50,7 @@ namespace CntApp.Utilities.Infrastructure
             return Name;
         }
 
-        public static ICollection<T> GetAll<T>() where T : Enumeration
+        public static ICollection<T> GetAll<T>() where T : EnumerationBase
         {
             var type = typeof(T);
             var values = type
@@ -60,7 +61,7 @@ namespace CntApp.Utilities.Infrastructure
             return values;
         }
 
-        public bool EqualsAnyIn<T>(params T[] list) where T : Enumeration
+        public bool EqualsAnyIn<T>(params T[] list) where T : EnumerationBase
         {
             var result = list.Any(x => x.Equals(this));
             return result;
@@ -68,7 +69,7 @@ namespace CntApp.Utilities.Infrastructure
 
         public override bool Equals(object obj)
         {
-            if (!(obj is Enumeration castedEnumeration))
+            if (!(obj is EnumerationBase castedEnumeration))
                 return false;
 
             var typeMatches = GetType() == obj.GetType();
@@ -87,20 +88,20 @@ namespace CntApp.Utilities.Infrastructure
             return Value.GetHashCode();
         }
 
-        public static T FromValue<T>(int value) where T : Enumeration
+        public static T FromValue<T>(int value) where T : EnumerationBase
         {
             var matchingItem = Parse<T, int>(value, item => item.Value == value);
             return matchingItem;
         }
 
         public static T FromName<T>(string name, StringComparison stringComparison = StringComparison.OrdinalIgnoreCase)
-            where T : Enumeration
+            where T : EnumerationBase
         {
             var matchingItem = Parse<T, string>(name, item => item.Name.Equals(name, stringComparison));
             return matchingItem;
         }
 
-        protected static T Parse<T, TK>(TK value, Func<T, bool> predicate) where T : Enumeration
+        protected static T Parse<T, TK>(TK value, Func<T, bool> predicate) where T : EnumerationBase
         {
             var matchingItem = GetAll<T>().FirstOrDefault(predicate);
             return matchingItem;
@@ -108,7 +109,7 @@ namespace CntApp.Utilities.Infrastructure
 
         public virtual HttpStatusCode ToHttpStatusCode()
         {
-            var httpStatusCode = (HttpStatusCode)Value;
+            var httpStatusCode = (HttpStatusCode) Value;
             return httpStatusCode;
         }
     }

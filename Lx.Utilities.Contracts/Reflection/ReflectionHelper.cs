@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Reflection;
 
-namespace CntApp.Utilities.Reflection
+namespace Lx.Utilities.Contracts.Reflection
 {
     public class ReflectionHelper
     {

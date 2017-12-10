@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Utilities\Constants\**" />
+    <EmbeddedResource Remove="Utilities\Constants\**" />
+    <None Remove="Utilities\Constants\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Images\calendar-new-white.svg" />
     <None Remove="Images\calendar-white.svg" />
     <None Remove="Images\circle.svg" />
@@ -61,7 +67,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Utilities\Constants\" />
+    <ProjectReference Include="..\..\Lx.Utilities.Client\Lx.Utilities.Client.csproj" />
+    <ProjectReference Include="..\..\Lx.Utilities.Contracts\Lx.Utilities.Contracts.csproj" />
+    <ProjectReference Include="..\..\Lx.Utilities.Services\Lx.Utilities.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

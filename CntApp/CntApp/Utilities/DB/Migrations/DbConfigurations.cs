@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using CntApp.Utilities.Files;
-using CntApp.Utilities.Infrastructure;
+using Lx.Utilities.Services.Infrastructure;
 using SQLite;
 
 namespace CntApp.Utilities.DB.Migrations

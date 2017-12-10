@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CntApp.Utilities.Infrastructure
+namespace Lx.Utilities.Contracts.Infrastructure
 {
     public class ForbiddenException : Exception
     {

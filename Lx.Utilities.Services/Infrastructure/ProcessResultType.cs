@@ -1,6 +1,6 @@
-﻿namespace CntApp.Utilities.Infrastructure
+﻿namespace Lx.Utilities.Services.Infrastructure
 {
-    public class ProcessResultType : Enumeration
+    public class ProcessResultType : EnumerationBase
     {
         public static ProcessResultType Unknown = new ProcessResultType(0, nameof(Unknown));
         public static ProcessResultType Continue = new ProcessResultType(100, nameof(Continue));
@@ -66,7 +66,9 @@
         public static ProcessResultType HttpVersionNotSupported = new ProcessResultType(505,
             nameof(HttpVersionNotSupported));
 
-        public ProcessResultType() { }
+        public ProcessResultType()
+        {
+        }
 
         public ProcessResultType(int value, string name, bool isSuccess = false)
             : base(value, name)
@@ -75,5 +77,6 @@
         }
 
         public bool IsSuccess { get; set; }
+        public override string Name { get; set; }
     }
 }
