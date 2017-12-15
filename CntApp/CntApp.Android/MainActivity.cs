@@ -18,7 +18,7 @@ namespace CntApp.Droid
 
             base.OnCreate(bundle);
 
-            CachedImageRenderer.Init();
+            CachedImageRenderer.Init(true);
             Forms.Init(this, bundle);
             LoadApplication(new App());
         }
