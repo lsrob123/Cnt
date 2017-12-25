@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.0
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CntApp.Android", "CntApp\CntApp.Android\CntApp.Android.csproj", "{96EDD771-4530-496F-A134-929DCD617190}"
 EndProject
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CntApp.UWP", "CntApp\CntApp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CntApp", "CntApp\CntApp\CntApp.csproj", "{C5299AF3-1CB5-49E5-8704-2FCB15776E8D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{45B15682-C3B0-4A9D-962A-0AFF10849FE7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Utilities", "_Utilities", "{45B15682-C3B0-4A9D-962A-0AFF10849FE7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{2F157615-2DA2-4A92-B2DC-7A07A927CD76}"
 EndProject
@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lx.Utilities.Contracts", "L
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lx.Utilities.Services", "Lx.Utilities.Services\Lx.Utilities.Services.csproj", "{2F3FB83D-088B-49AD-AD6A-8DF071B96263}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lx.Utilities.Server", "Lx.Utilities.Server\Lx.Utilities.Server.csproj", "{DA90DAC0-6FEC-42C3-8072-F6ABBA46CF3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lx.Utilities.Server", "Lx.Utilities.Server\Lx.Utilities.Server.csproj", "{DA90DAC0-6FEC-42C3-8072-F6ABBA46CF3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lx.Utilities.Client", "Lx.Utilities.Client\Lx.Utilities.Client.csproj", "{5F7BF193-4FAB-4348-B779-57CA9AB0F7FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lx.Utilities.Client", "Lx.Utilities.Client\Lx.Utilities.Client.csproj", "{5F7BF193-4FAB-4348-B779-57CA9AB0F7FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
