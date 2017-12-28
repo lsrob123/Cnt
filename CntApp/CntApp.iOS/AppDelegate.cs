@@ -1,5 +1,6 @@
 ﻿using FFImageLoading.Forms.Touch;
 using Foundation;
+using KeyboardOverlap.Forms.Plugin.iOSUnified;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -24,6 +25,7 @@ namespace CntApp.iOS
             Forms.Init();
             CachedImageRenderer.Init();
             LoadApplication(new CntApp.App());
+            KeyboardOverlapRenderer.Init();
 
             return base.FinishedLaunching(app, options);
         }
