@@ -1,6 +1,7 @@
 ﻿using CntApp.Master;
 using CntApp.Utilities.Dependencies;
 using Lx.Utilities.Contracts.Reflection;
+using Realms;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +16,8 @@ namespace CntApp
             InitializeComponent();
 
             DependencyRegistry.Init();
+
+            var vRealmDb = Realm.GetInstance();
 
             MainPage = new Starting();
 
