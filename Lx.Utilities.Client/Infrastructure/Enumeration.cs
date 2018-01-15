@@ -1,5 +1,4 @@
 ﻿using Lx.Utilities.Services.Infrastructure;
-using SQLite;
 
 namespace Lx.Utilities.Client.Infrastructure
 {
@@ -17,7 +16,6 @@ namespace Lx.Utilities.Client.Infrastructure
         {
         }
 
-        [MaxLength(128)]
         public override string Name { get; set; }
     }
 }
