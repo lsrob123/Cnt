@@ -31,6 +31,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="FodyWeavers.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="Images\calendar-new-white.svg" />
     <EmbeddedResource Include="Images\calendar-white.svg" />
     <EmbeddedResource Include="Images\circle.svg" />
