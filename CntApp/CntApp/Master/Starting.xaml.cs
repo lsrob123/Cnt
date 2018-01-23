@@ -2,6 +2,7 @@
 using CntApp.Domains.Home;
 using CntApp.Utilities.Dependencies;
 using CntApp.Utilities.Messages;
+using Plugin.DeviceInfo;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

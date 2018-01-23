@@ -1,9 +1,9 @@
-﻿using Lx.Utilities.Services.Infrastructure;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using Lx.Utilities.Contracts.Infrastructure;
 
 namespace Lx.Utilities.Server.NetFramework.Infrastructure
 {
-    public abstract class Enumeration : EnumerationBase
+    public abstract class Enumeration : Contracts.Infrastructure.Enumeration
     {
         protected Enumeration()
         {
@@ -13,7 +13,7 @@ namespace Lx.Utilities.Server.NetFramework.Infrastructure
         {
         }
 
-        protected Enumeration(EnumerationBase other) : base(other)
+        protected Enumeration(Contracts.Infrastructure.Enumeration other) : base(other)
         {
         }
 

@@ -53,10 +53,6 @@
       <Project>{716e5f66-9b18-403a-87e0-6d6647fbbf5c}</Project>
       <Name>Lx.Utilities.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Lx.Utilities.Services\Lx.Utilities.Services.csproj">
-      <Project>{2F3FB83D-088B-49AD-AD6A-8DF071B96263}</Project>
-      <Name>Lx.Utilities.Services</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

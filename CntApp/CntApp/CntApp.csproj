@@ -49,6 +49,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Acr.DeviceInfo" Version="5.0.5" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="SkiaSharp" Version="1.59.3" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.3.4" />
@@ -66,9 +67,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Lx.Utilities.Client\Lx.Utilities.Client.csproj" />
     <ProjectReference Include="..\..\Lx.Utilities.Contracts\Lx.Utilities.Contracts.csproj" />
-    <ProjectReference Include="..\..\Lx.Utilities.Services\Lx.Utilities.Services.csproj" />
+    <ProjectReference Include="..\..\Lx.Utilities.Xamarin\Lx.Utilities.Xamarin.csproj" />
   </ItemGroup>
 
   <ItemGroup>
