@@ -32,10 +32,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetFramework", "NetFramework", "{DF3A9208-0E83-4EBF-97D2-D4D48B9DFD7D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F075548-5D6C-425E-8EA3-9A6ED45627ED}"
-	ProjectSection(SolutionItems) = preProject
-		FodyWeavers.xml = FodyWeavers.xml
-		Tools\SdvRealmWeaver.Fody.dll = Tools\SdvRealmWeaver.Fody.dll
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
