@@ -182,6 +182,10 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.6" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Lx.Utilities.Xamarin\Lx.Utilities.Xamarin.csproj">
+      <Project>{b5adbc5e-77d7-481e-b489-bbe2ec556661}</Project>
+      <Name>Lx.Utilities.Xamarin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CntApp\CntApp.csproj">
       <Project>{58E33F52-5453-4A29-94E2-9448A721004D}</Project>
       <Name>CntApp</Name>
