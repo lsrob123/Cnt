@@ -1,8 +1,6 @@
-﻿using Xamarin.Forms;
-
-namespace CntApp.Utilities.Messages
+﻿namespace Lx.Utilities.Xamarin.Messages
 {
-    public static class ContentViewBaseExtensions
+    public static class MessageBaseExtensions
     {
         public static string GetTypeName<TMessage, TData>(this TMessage message) where TMessage : MessageBase<TData>
         {

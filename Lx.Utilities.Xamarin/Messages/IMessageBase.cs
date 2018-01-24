@@ -1,4 +1,4 @@
-﻿namespace CntApp.Utilities.Messages
+﻿namespace Lx.Utilities.Xamarin.Messages
 {
     public interface IMessageBase
     {

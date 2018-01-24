@@ -1,58 +1,46 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using CntApp.Utilities;
+using Lx.Utilities.Xamarin.Etc;
 
-namespace CntApp.Domains.MyProfile
-{
-    public class MyProfileViewModel : INotifyPropertyChanged
-    {
+namespace CntApp.Domains.MyProfile {
+    public class MyProfileViewModel : INotifyPropertyChanged {
         private string _imageFilePath, _fullName, _nickname, _mobile, _email;
 
-        public string ImageFilePath
-        {
+        public string ImageFilePath {
             get => _imageFilePath;
-            set
-            {
+            set {
                 _imageFilePath = value;
                 OnPropertyChanged(nameof(ImageFilePath));
             }
         }
 
-        public string FullName
-        {
+        public string FullName {
             get => _fullName;
-            set
-            {
+            set {
                 _fullName = value;
                 OnPropertyChanged(nameof(FullName));
             }
         }
 
-        public string Nickname
-        {
+        public string Nickname {
             get => _nickname;
-            set
-            {
+            set {
                 _nickname = value;
                 OnPropertyChanged(nameof(Nickname));
             }
         }
 
-        public string Mobile
-        {
+        public string Mobile {
             get => _mobile;
-            set
-            {
+            set {
                 _mobile = value;
                 OnPropertyChanged(nameof(Mobile));
             }
         }
 
-        public string Email
-        {
+        public string Email {
             get => _email;
-            set
-            {
+            set {
                 _email = value;
                 OnPropertyChanged(nameof(Email));
             }
@@ -61,8 +49,7 @@ namespace CntApp.Domains.MyProfile
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null) {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }

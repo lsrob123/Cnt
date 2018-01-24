@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Orientation\" />
+    <Compile Remove="Orientation\**" />
+    <EmbeddedResource Remove="Orientation\**" />
+    <None Remove="Orientation\**" />
   </ItemGroup>
 
   <ItemGroup>

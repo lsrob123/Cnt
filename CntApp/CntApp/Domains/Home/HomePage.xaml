@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<u:AdaptiveContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<pages:AdaptiveContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CntApp.Domains.Home.HomePage" Title="Home" ControlTemplate="{StaticResource CommonDetailPageTemplate}"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             xmlns:u="clr-namespace:Lx.Utilities.Xamarin;assembly=Lx.Utilities.Xamarin"
+             xmlns:pages="clr-namespace:Lx.Utilities.Xamarin.Pages;assembly=Lx.Utilities.Xamarin"
              ios:Page.UseSafeArea="true">
     <ContentPage.Content>
         <!--<BoxView Color="Red" Margin="20" WidthRequest="600" HeightRequest="3000"></BoxView>-->
+        <Label x:Name="LblPageInfo" Text="(n/a)"></Label>
     </ContentPage.Content>
-</u:AdaptiveContentPage>
+</pages:AdaptiveContentPage>
