@@ -9,6 +9,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Lx.Utilities.NetStandard\Lx.Utilities.NetStandard.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Plugin.DeviceInfo">
       <HintPath>..\..\..\..\Users\lixin\.nuget\packages\acr.deviceinfo\5.0.5\lib\uap10.0\Plugin.DeviceInfo.dll</HintPath>
     </Reference>
