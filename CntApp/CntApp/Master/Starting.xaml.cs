@@ -2,6 +2,7 @@
 using CntApp.Domains.Home;
 using CntApp.Utilities.Dependencies;
 using CntApp.Utilities.Messages;
+using Lx.Utilities.Contracts.Reflection;
 using Plugin.DeviceInfo;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,6 +15,9 @@ namespace CntApp.Master
         public Starting()
         {
             InitializeComponent();
+
+            //DependencyRegistry.Init();
+            //var embeddedResources = new ReflectionHelper().ListAllEmbeddedResources();
 
             Master = new StartingMaster();
 

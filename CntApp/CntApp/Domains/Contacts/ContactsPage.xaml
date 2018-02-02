@@ -7,6 +7,9 @@
              ControlTemplate="{StaticResource CommonDetailPageTemplate}"
              ios:Page.UseSafeArea="true">
     <ContentPage.Content>
-        <Label TextColor="Blue" Text="{Binding TimeCreated}"></Label>
+        <StackLayout>
+            <Label TextColor="Red" Text="Static Content"></Label>
+            <Label TextColor="Blue" Text="{Binding TimeCreated, StringFormat='Time created is {0:yyyy-MM-dd HH:mm:ss.fff}.'}"></Label>
+        </StackLayout>
     </ContentPage.Content>
 </pages:AdaptiveContentPage>

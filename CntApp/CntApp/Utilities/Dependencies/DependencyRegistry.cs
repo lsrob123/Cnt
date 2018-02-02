@@ -9,8 +9,10 @@ using Lx.Utilities.Contracts.Mapping;
 using Lx.Utilities.NetStandard.Mapping;
 using Xamarin.Forms;
 
-namespace CntApp.Utilities.Dependencies {
-    public static class DependencyRegistry {
+namespace CntApp.Utilities.Dependencies
+{
+    public static class DependencyRegistry
+    {
         public static IMappingService MappingService;
         public static IRepository Repository;
 
@@ -25,12 +27,17 @@ namespace CntApp.Utilities.Dependencies {
         public static MyProfileViewModel MyProfileViewModel { get; private set; }
         public static ContactsPage ContactsPage => new ContactsPage(ContactsViewModel);
 
-        public static void Init() {
+        /// <summary>
+        ///     A seperate Init() for explicitly bootstrapping the DepedencyRegistry
+        /// </summary>
+        public static void Init()
+        {
             MappingService = new MappingService(new MapperConfiguration(x => x.CreateMissingTypeMaps = true));
 
             Repository = new Repository(FileManager, MappingService);
 
-            MyProfileViewModel = new MyProfileViewModel {
+            MyProfileViewModel = new MyProfileViewModel
+            {
                 ImageFilePath = FileManager.MyProfileImagePath,
 
 #if DEBUG
@@ -46,8 +53,10 @@ namespace CntApp.Utilities.Dependencies {
             ContactsViewModel = new ContactsViewModel(ContactsService);
         }
 
-        public static NavigationPage ResolveDetailPage(string detailPageName) {
-            switch (detailPageName) {
+        public static NavigationPage ResolveDetailPage(string detailPageName)
+        {
+            switch (detailPageName)
+            {
                 case nameof(Domains.Contacts.ContactsPage):
                     return CreateDetailPage(ContactsPage);
                 default:
@@ -55,7 +64,8 @@ namespace CntApp.Utilities.Dependencies {
             }
         }
 
-        private static NavigationPage CreateDetailPage(Page view) {
+        private static NavigationPage CreateDetailPage(Page view)
+        {
             return NavigationBarStyler.Style(new NavigationPage(view));
         }
     }

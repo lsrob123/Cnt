@@ -6,14 +6,14 @@ namespace Lx.Utilities.Xamarin.Pages {
         protected AdaptiveContentPage() {
             SizeChanged += AdaptiveContentPage_SizeChanged;
 
-            ExecuteInit();
+            //ExecuteInit();
         }
 
-        private void ExecuteInit() {
-            Init();
-        }
+        //private void ExecuteInit() {
+        //    Init();
+        //}
 
-        protected abstract void Init();
+        //protected abstract void Init();
 
         protected virtual void AdditionalSizeChangedCallback(object sender, EventArgs e, PageInfo pageInfo) { }
 

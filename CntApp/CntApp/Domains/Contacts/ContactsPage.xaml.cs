@@ -10,8 +10,5 @@ namespace CntApp.Domains.Contacts {
 
             BindingContext = contactsViewModel;
         }
-
-        protected override void Init() {
-        }
     }
 }

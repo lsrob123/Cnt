@@ -1,9 +1,10 @@
 ﻿using CntApp.Master;
 using CntApp.Utilities.Dependencies;
 using Lx.Utilities.Contracts.Reflection;
-//using Realms;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
+//using Realms;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
@@ -14,17 +15,17 @@ namespace CntApp
         public App()
         {
             InitializeComponent();
-
             DependencyRegistry.Init();
 
-            MainPage = new Starting();
-
+#if DEBUG
             var embeddedResources = new ReflectionHelper().ListAllEmbeddedResources();
+#endif
+
+            MainPage = new Starting();
         }
 
         protected override void OnStart()
         {
-            // Handle when your app starts
         }
 
         protected override void OnSleep()
