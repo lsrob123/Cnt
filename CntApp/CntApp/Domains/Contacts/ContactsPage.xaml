@@ -7,6 +7,6 @@
              ControlTemplate="{StaticResource CommonDetailPageTemplate}"
              ios:Page.UseSafeArea="true">
     <ContentPage.Content>
-        <Label TextColor="Blue" Text="Haha Contacts !"></Label>
+        <Label TextColor="Blue" Text="{Binding TimeCreated}"></Label>
     </ContentPage.Content>
 </pages:AdaptiveContentPage>

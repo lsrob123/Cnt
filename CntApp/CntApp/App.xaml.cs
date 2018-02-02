@@ -17,8 +17,6 @@ namespace CntApp
 
             DependencyRegistry.Init();
 
-            //var vRealmDb = Realm.GetInstance();
-
             MainPage = new Starting();
 
             var embeddedResources = new ReflectionHelper().ListAllEmbeddedResources();

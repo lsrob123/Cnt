@@ -20,22 +20,22 @@
         </Grid.RowDefinitions>
         <!--<ffSvg:SvgCachedImage Source="resource://CntApp.Images.logo-white-shadow.svg" Grid.Row="0" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" HorizontalOptions="Center" />-->
         <StackLayout Grid.Row="0">
-            <myProfile:MyProfileView x:Name="MyProfileView" VerticalOptions="CenterAndExpand" 
+            <myProfile:MyProfileView x:Name="ProfileView" VerticalOptions="CenterAndExpand" 
                                      HorizontalOptions="StartAndExpand" Margin="4,2,12,3">
             </myProfile:MyProfileView>
         </StackLayout>
-        <controls:ButtonControl x:Name="BtnHome" SvgIconSource="resource://CntApp.Images.home-white.svg" Grid.Row="1" 
+        <controls:ButtonControl SvgIconSource="resource://CntApp.Images.home-white.svg" Grid.Row="1" 
                                 Text="Home" Style="{DynamicResource MasterButton}">
             <controls:ButtonControl.GestureRecognizers>
                 <TapGestureRecognizer Tapped="HomeTapped"></TapGestureRecognizer>
             </controls:ButtonControl.GestureRecognizers>
         </controls:ButtonControl>
-        <controls:ButtonControl x:Name="BtnManageContacts" SvgIconSource="resource://CntApp.Images.contacts-white.svg" Grid.Row="2" Text="Contacts" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonOrange}">
+        <controls:ButtonControl SvgIconSource="resource://CntApp.Images.contacts-white.svg" Grid.Row="2" Text="Contacts" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonOrange}">
             <controls:ButtonControl.GestureRecognizers>
                 <TapGestureRecognizer Tapped="ContactsTapped"></TapGestureRecognizer>
             </controls:ButtonControl.GestureRecognizers>
         </controls:ButtonControl>
-        <controls:ButtonControl x:Name="BtnManageCircles" SvgIconSource="resource://CntApp.Images.social-circle-white.svg" Grid.Row="3" Text="Social Circles" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonGreen}">
+        <controls:ButtonControl SvgIconSource="resource://CntApp.Images.social-circle-white.svg" Grid.Row="3" Text="Social Circles" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonGreen}">
         </controls:ButtonControl>
         <controls:ButtonControl  SvgIconSource="resource://CntApp.Images.team.svg" Grid.Row="4" Text="Teams" Style="{DynamicResource MasterButton}" BackgroundColor="{DynamicResource ButtonPink}">
         </controls:ButtonControl>

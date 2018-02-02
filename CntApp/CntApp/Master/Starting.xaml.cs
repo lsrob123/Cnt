@@ -15,7 +15,7 @@ namespace CntApp.Master
         {
             InitializeComponent();
 
-            Master = new StartingMaster(DependencyRegistry.LocalStateStore);
+            Master = new StartingMaster();
 
             OpenDetailPage(new OpenDetailPageMessage(nameof(HomePage)));
 

@@ -6,7 +6,7 @@ namespace Lx.Utilities.NetStandard.Mapping {
         protected readonly IMapper BackingMapper;
 
         public MappingService(IConfigurationProvider mapperConfiguration) {
-            BackingMapper = new Mapper(mapperConfiguration);
+            BackingMapper = new Mapper(new MapperConfiguration(x => x.CreateMissingTypeMaps = true));
         }
 
         public TDestination Map<TDestination>(object source) {
