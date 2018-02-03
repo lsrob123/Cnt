@@ -5,6 +5,6 @@ using Lx.Utilities.NetStandard.Pagination;
 
 namespace CntApp.Utilities.Persistence {
     public interface IRepository {
-        Task<ListContactsResult> ListContactsAsync(IPaginationInfo pagination);
+        ListContactsResult ListContacts(IPaginationInfo pagination);
     }
 }

@@ -18,7 +18,7 @@ namespace CntApp.Domains.Contacts
         {
             _contactsService = contactsService;
 
-            var result = _contactsService.ListContactsAsync(new PaginationInfo {PageNumber = 1, PageSize = 10}).Result;
+            var result = _contactsService.ListContacts(new PaginationInfo {PageNumber = 1, PageSize = 10});
             Contacts = result.Contacts;
             TimeCreated = result.TimeCreated;
         }

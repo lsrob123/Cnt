@@ -3,6 +3,6 @@ using Lx.Utilities.NetStandard.Pagination;
 
 namespace CntApp.Domains.Contacts {
     public interface IContactsService {
-        Task<ListContactsResult> ListContactsAsync(IPaginationInfo pagination);
+        ListContactsResult ListContacts(IPaginationInfo pagination);
     }
 }

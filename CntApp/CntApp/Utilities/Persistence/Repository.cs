@@ -1,38 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using CntApp.Domains.Contacts;
 using CntApp.Utilities.Files;
 using Lx.Utilities.Contracts.Mapping;
 using Lx.Utilities.NetStandard.Pagination;
-using Lx.Utilities.NetStandard.PersonName;
+using Lx.Utilities.NetStandard.Persistence;
+using SQLite;
 
-namespace CntApp.Utilities.Persistence {
-    public class Repository : IRepository {
-        private readonly IFileManager _fileManager;
+namespace CntApp.Utilities.Persistence
+{
+    public class Repository : IRepository
+    {
+        private readonly SQLiteConnection _connection;
+
         private readonly IMappingService _mappingService;
 
-        public Repository(IFileManager fileManager, IMappingService mappingService) {
-            _fileManager = fileManager;
+        public Repository(IFileManager fileManager, IMappingService mappingService)
+        {
             _mappingService = mappingService;
+
+            var sqliteDbFilePath = fileManager.GetSqliteDbFilePath("cnt.db3");
+
+            _connection = new SQLiteConnection(sqliteDbFilePath,
+                SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create | SQLiteOpenFlags.SharedCache);
+            //_connection = new SQLiteConnection(sqliteDbFilePath);
+
+            new MigrationManager(_connection).ApplyMigrations(true);
         }
 
-        public async Task<ListContactsResult> ListContactsAsync(IPaginationInfo pagination) {
-            var result = new ListContactsResult {
-                Contacts = new List<Contact> {
-                    new Contact {
-                        Key = Guid.NewGuid(),
-                        PersonName = new PersonName {FamilyName = "abc", GivenName = "123"}
-                    },
-                    new Contact {
-                        Key = Guid.NewGuid(),
-                        PersonName = new PersonName {FamilyName = "def", GivenName = "456"}
-                    }
-                },
+        public ListContactsResult ListContacts(IPaginationInfo pagination)
+        {
+            var contactPms = _connection.Table<ContactPm>().ToList();
+            var contacts = contactPms.Select(x => new Contact().WithValidKey(x.Key).WithPersonName(x))
+                .ToList();
+
+            var result = new ListContactsResult
+            {
+                Contacts = contacts
                 //PaginatedListInfo = _mappingService.Map<PaginatedListInfo>(pagination)
             };
 
-            return await Task.FromResult(result);
+            return result;
         }
     }
 }

@@ -14,7 +14,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal" BindingContext="{Binding PersonName}">
+                            <StackLayout Orientation="Horizontal" >
                                 <Label Text="{Binding GivenName}"></Label>
                                 <Label Text="{Binding FamilyName}"></Label>
                             </StackLayout>

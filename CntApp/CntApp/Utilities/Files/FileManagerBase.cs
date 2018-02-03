@@ -2,7 +2,7 @@
 
 namespace CntApp.Utilities.Files
 {
-    public abstract class FilePathResolverBase : IFileManager
+    public abstract class FileManagerBase : IFileManager
     {
         public const string DefaultProfileImageFileName = "myprofile.jpg";
         public virtual string RootFolderName => "cnt";
@@ -15,7 +15,8 @@ namespace CntApp.Utilities.Files
 
         public virtual string GetSqliteDbFilePath(string dbFileName)
         {
-            return Path.Combine(ApplicationDataFolder, RootFolderName, dbFileName);
+            //return Path.Combine(ApplicationDataFolder, RootFolderName, dbFileName);
+            return Path.Combine(ApplicationDataFolder, dbFileName);
         }
 
         /// <summary>

@@ -10,8 +10,8 @@ namespace CntApp.Domains.Contacts {
             _repository = repository;
         }
 
-        public async Task<ListContactsResult> ListContactsAsync(IPaginationInfo pagination) {
-            var result = await _repository.ListContactsAsync(pagination);
+        public ListContactsResult ListContacts(IPaginationInfo pagination) {
+            var result =  _repository.ListContacts(pagination);
             return result;
         }
 

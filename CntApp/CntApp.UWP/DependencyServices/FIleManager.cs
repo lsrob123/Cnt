@@ -1,13 +1,15 @@
-﻿using System;
-using System.IO;
-using CntApp.Utilities.Files;
+﻿using CntApp.Utilities.Files;
 using CntApp.UWP.DependencyServices;
+using System;
+using System.IO;
+using Windows.Storage;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(FIleManager))]
 
-namespace CntApp.UWP.DependencyServices {
-    public class FIleManager : FilePathResolverBase {
+namespace CntApp.UWP.DependencyServices
+{
+    public class FIleManager : FileManagerBase {
         public override string MyProfileImagePath => Compose(@"/Assets/MyProfile/{0}", DefaultProfileImageFileName);
 
         public override void DeleteFile(string filePath)
@@ -15,11 +17,14 @@ namespace CntApp.UWP.DependencyServices {
             File.Delete(filePath);
         }
 
+        //public override string ApplicationDataFolder =>
+        //    Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+
         public override string ApplicationDataFolder =>
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            ApplicationData.Current.LocalFolder.Path;
 
         public override string PersonalFolder =>
-            Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            ApplicationData.Current.LocalFolder.Path;
 
         public override string GetToolbarItemIconPath(string iconFileName) {
             return Compose(@"/Assets/ToobarItemIcons/{0}", iconFileName);

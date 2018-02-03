@@ -7,7 +7,7 @@ using Xamarin.Forms;
 [assembly: Dependency(typeof(FIleManager))]
 
 namespace CntApp.iOS.DependencyServices {
-    public class FIleManager : FilePathResolverBase {
+    public class FIleManager : FileManagerBase {
         public override string MyProfileImagePath => $"myprofile/{DefaultProfileImageFileName}";
 
         public override void DeleteFile(string filePath)
@@ -16,7 +16,7 @@ namespace CntApp.iOS.DependencyServices {
         }
 
         public override string ApplicationDataFolder =>
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 
         public override string PersonalFolder =>
             Environment.GetFolderPath(Environment.SpecialFolder.Personal);
