@@ -7,9 +7,21 @@
              ControlTemplate="{StaticResource CommonDetailPageTemplate}"
              ios:Page.UseSafeArea="true">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Orientation="Vertical">
             <Label TextColor="Red" Text="Static Content"></Label>
             <Label TextColor="Blue" Text="{Binding TimeCreated, StringFormat='Time created is {0:yyyy-MM-dd HH:mm:ss.fff}.'}"></Label>
+            <ListView x:Name="ContactsListView" ItemsSource="{Binding Contacts}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" BindingContext="{Binding PersonName}">
+                                <Label Text="{Binding GivenName}"></Label>
+                                <Label Text="{Binding FamilyName}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </pages:AdaptiveContentPage>
