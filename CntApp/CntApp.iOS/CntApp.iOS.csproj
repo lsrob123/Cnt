@@ -91,6 +91,7 @@
     <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DependencyServices\DeviceContactService.cs" />
     <Compile Include="DependencyServices\FIleManager.cs" />
     <Compile Include="DependencyServices\NavigationBarStyler.cs" />
     <Compile Include="Main.cs" />

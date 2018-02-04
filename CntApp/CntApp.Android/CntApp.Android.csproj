@@ -83,6 +83,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="26.1.0.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyServices\DeviceContactService.cs" />
     <Compile Include="DependencyServices\FIleManager.cs" />
     <Compile Include="DependencyServices\NavigationBarStyler.cs" />
     <Compile Include="MainActivity.cs" />

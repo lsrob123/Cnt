@@ -15,7 +15,7 @@ namespace CntApp.Utilities.Config
         private static void SetMapperConfigurationExpression(IMapperConfigurationExpression x)
         {
             x.CreateMissingTypeMaps = true;
-            x.CreateMap<Contact, ContactPm>().ReverseMap();
+            x.CreateMap<Contact, Contact>().ReverseMap();
         }
     }
 }

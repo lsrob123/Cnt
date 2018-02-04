@@ -21,16 +21,13 @@ namespace CntApp.Utilities.Persistence
 
             _connection = new SQLiteConnection(sqliteDbFilePath,
                 SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create | SQLiteOpenFlags.SharedCache);
-            //_connection = new SQLiteConnection(sqliteDbFilePath);
 
             new MigrationManager(_connection).ApplyMigrations(true);
         }
 
         public ListContactsResult ListContacts(IPaginationInfo pagination)
         {
-            var contactPms = _connection.Table<ContactPm>().ToList();
-            var contacts = contactPms.Select(x => _mappingService.Map<Contact>(x))
-                .ToList();
+            var contacts = _connection.Table<Contact>().ToList();
 
             var result = new ListContactsResult
             {

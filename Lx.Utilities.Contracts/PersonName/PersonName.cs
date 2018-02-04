@@ -1,4 +1,4 @@
-﻿namespace Lx.Utilities.NetStandard.PersonName {
+﻿namespace Lx.Utilities.Contracts.PersonName {
     public class PersonName : IPersonName
     {
         public string FamilyName { get; set; }

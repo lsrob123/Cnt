@@ -17,15 +17,16 @@ namespace CntApp.Utilities.Config
         public static IMappingService MappingService;
         public static IRepository Repository;
 
-        public static IContactsService ContactsService;
-        public static ContactsViewModel ContactsViewModel;
-
         public static IFileManager FileManager => DependencyService.Get<IFileManager>();
         public static INavigationBarStyler NavigationBarStyler => DependencyService.Get<INavigationBarStyler>();
 
         public static HomePage HomePage => new HomePage();
 
         public static MyProfileViewModel MyProfileViewModel { get; private set; }
+
+        public static IDeviceContactService DeviceContactService => DependencyService.Get<IDeviceContactService>();
+        public static IContactsService ContactsService;
+        public static ContactsViewModel ContactsViewModel;
         public static ContactsPage ContactsPage => new ContactsPage(ContactsViewModel);
 
         /// <summary>
