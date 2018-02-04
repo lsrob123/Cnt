@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using Lx.Utilities.NetStandard.Pagination;
 using Lx.Utilities.Xamarin.Etc;
 
@@ -11,6 +12,7 @@ namespace CntApp.Domains.Contacts
     {
         private readonly ICollection<Contact> _contacts = new List<Contact>();
 
+        // ReSharper disable once PrivateFieldCanBeConvertedToLocalVariable
         private readonly IContactsService _contactsService;
         private DateTimeOffset? _timeCreated;
 
@@ -18,6 +20,12 @@ namespace CntApp.Domains.Contacts
         {
             _contactsService = contactsService;
 
+            //LoadContacts();
+            Task.Run(() => LoadContacts());
+        }
+
+        public void LoadContacts()
+        {
             var result = _contactsService.ListContacts(new PaginationInfo {PageNumber = 1, PageSize = 10});
             Contacts = result.Contacts;
             TimeCreated = result.TimeCreated;

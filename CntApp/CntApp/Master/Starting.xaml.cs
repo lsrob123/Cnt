@@ -1,4 +1,5 @@
-﻿using CntApp.Domains.Footers;
+﻿using System;
+using CntApp.Domains.Footers;
 using CntApp.Domains.Home;
 using CntApp.Utilities.Config;
 using CntApp.Utilities.Messages;
@@ -10,8 +11,12 @@ namespace CntApp.Master
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Starting : MasterDetailPage
     {
-        public Starting()
+        private readonly Func<string, NavigationPage> _resolveDetailPage;
+
+        public Starting(Func<string, NavigationPage> resolveDetailPage)
         {
+            _resolveDetailPage = resolveDetailPage;
+
             InitializeComponent();
 
             Master = new StartingMaster();
@@ -29,7 +34,7 @@ namespace CntApp.Master
 
         private void OpenDetailPage(OpenDetailPageMessage message)
         {
-            Detail = DependencyRegistry.ResolveDetailPage(message.Data);
+            Detail = _resolveDetailPage(message.Data);
 
             if (!MasterBehavior.Equals(MasterBehavior.Split) &&
                 !MasterBehavior.Equals(MasterBehavior.SplitOnLandscape) &&

@@ -21,7 +21,7 @@ namespace CntApp
             var embeddedResources = new ReflectionHelper().ListAllEmbeddedResources();
 #endif
 
-            MainPage = new Starting();
+            MainPage = new Starting(DependencyRegistry.ResolveDetailPage);
         }
 
         protected override void OnStart()
