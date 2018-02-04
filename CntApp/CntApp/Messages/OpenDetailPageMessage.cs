@@ -1,6 +1,6 @@
 ﻿using Lx.Utilities.Xamarin.Messages;
 
-namespace CntApp.Utilities.Messages
+namespace CntApp.Messages
 {
     public class OpenDetailPageMessage : MessageBase<string>
     {

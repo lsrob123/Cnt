@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using CntApp.Domains.Contacts;
 
-namespace CntApp.Utilities.Config
+namespace CntApp.Config
 {
     public static class MappingConfigurator
     {

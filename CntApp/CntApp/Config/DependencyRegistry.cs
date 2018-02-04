@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using CntApp.Domains.Contacts;
 using CntApp.Domains.Home;
 using CntApp.Domains.MyProfile;
@@ -10,7 +9,7 @@ using Lx.Utilities.Contracts.Mapping;
 using Lx.Utilities.NetStandard.Mapping;
 using Xamarin.Forms;
 
-namespace CntApp.Utilities.Config
+namespace CntApp.Config
 {
     public static class DependencyRegistry
     {
@@ -52,7 +51,7 @@ namespace CntApp.Utilities.Config
             Task.Delay(1000)
                 //.ContinueWith(t=>Console.WriteLine($"Initializing DB and services {DateTimeOffset.UtcNow:yyyy-MM-dd HH:mm:ss.fff}."))
                 .ContinueWith(t => Repository = new Repository(FileManager, MappingService))
-                .ContinueWith(t => ContactsService = new ContactsService(t.Result))
+                .ContinueWith(t => ContactsService = new ContactsService(t.Result, DeviceContactService))
                 .ContinueWith(t => ContactsViewModel = new ContactsViewModel(t.Result))
                 //.ContinueWith(t => Console.WriteLine($"Initialized DB and services {DateTimeOffset.UtcNow:yyyy-MM-dd HH:mm:ss.fff}."))
                 ;

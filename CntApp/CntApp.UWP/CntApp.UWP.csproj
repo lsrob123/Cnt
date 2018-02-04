@@ -93,7 +93,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="DependencyServices\DeviceContactService.cs" />
-    <Compile Include="DependencyServices\FIleManager.cs" />
+    <Compile Include="DependencyServices\FileManager.cs" />
     <Compile Include="DependencyServices\NavigationBarStyler.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

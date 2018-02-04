@@ -5,11 +5,11 @@ using System.IO;
 using Windows.Storage;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(FIleManager))]
+[assembly: Dependency(typeof(FileManager))]
 
 namespace CntApp.UWP.DependencyServices
 {
-    public class FIleManager : FileManagerBase {
+    public class FileManager : FileManagerBase {
         public override string MyProfileImagePath => Compose(@"/Assets/MyProfile/{0}", DefaultProfileImageFileName);
 
         public override void DeleteFile(string filePath)

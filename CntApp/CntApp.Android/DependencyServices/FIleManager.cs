@@ -4,10 +4,10 @@ using CntApp.Droid.DependencyServices;
 using CntApp.Utilities.Files;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(FIleManager))]
+[assembly: Dependency(typeof(FileManager))]
 
 namespace CntApp.Droid.DependencyServices {
-    public class FIleManager : FileManagerBase {
+    public class FileManager : FileManagerBase {
         public override string MyProfileImagePath => DefaultProfileImageFileName;
 
         public override void DeleteFile(string filePath)

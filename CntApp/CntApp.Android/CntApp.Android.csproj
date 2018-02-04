@@ -84,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyServices\DeviceContactService.cs" />
-    <Compile Include="DependencyServices\FIleManager.cs" />
+    <Compile Include="DependencyServices\FileManager.cs" />
     <Compile Include="DependencyServices\NavigationBarStyler.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -111,6 +111,14 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Lx.Utilities.Contracts\Lx.Utilities.Contracts.csproj">
+      <Project>{716E5F66-9B18-403A-87E0-6D6647FBBF5C}</Project>
+      <Name>Lx.Utilities.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lx.Utilities.NetStandard\Lx.Utilities.NetStandard.csproj">
+      <Project>{F8F7B769-08DE-41F2-8B4A-2B93D5AB6266}</Project>
+      <Name>Lx.Utilities.NetStandard</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CntApp\CntApp.csproj">
       <Project>{58E33F52-5453-4A29-94E2-9448A721004D}</Project>
       <Name>CntApp</Name>

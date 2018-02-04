@@ -1,8 +1,7 @@
 ﻿using System;
 using CntApp.Domains.Footers;
 using CntApp.Domains.Home;
-using CntApp.Utilities.Config;
-using CntApp.Utilities.Messages;
+using CntApp.Messages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

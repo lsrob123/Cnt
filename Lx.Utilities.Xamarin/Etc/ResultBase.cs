@@ -2,8 +2,8 @@
 using Lx.Utilities.Contracts.Infrastructure;
 
 namespace Lx.Utilities.Xamarin.Etc {
-    public class ResultBase {
-        public ResultBase() {
+    public abstract class ResultBase {
+        protected ResultBase() {
             TimeCreated = DateTimeOffset.UtcNow;
         }
 

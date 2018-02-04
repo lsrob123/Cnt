@@ -9,6 +9,9 @@ namespace CntApp.Domains.Contacts
     public class Contact : SqLitePersistenceModelBase, IContact
     {
         [MaxLength(50)]
+        public string DisplayName { get; protected set; }
+
+        [MaxLength(50)]
         public string FamilyName { get; protected set; }
 
         [MaxLength(50)]
@@ -18,7 +21,7 @@ namespace CntApp.Domains.Contacts
         public string EmailAddress { get; protected set; }
 
         [MaxLength(50)]
-        public string EmailAccountName { get; protected set; }
+        public string EmailDisplayName { get; protected set; }
 
         public int? PhoneCountryCode { get; protected set; }
 
@@ -32,9 +35,17 @@ namespace CntApp.Domains.Contacts
 
         public Contact WithPersonName(IPersonName personName)
         {
+            WithDisplayName(personName.DisplayName);
             FamilyName = personName.FamilyName;
             GivenName = personName.GivenName;
             return this;
         }
+
+        public Contact WithDisplayName(string displayName)
+        {
+            DisplayName = displayName;
+            return this;
+        }
+
     }
 }

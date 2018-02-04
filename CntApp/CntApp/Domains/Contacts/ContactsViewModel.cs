@@ -20,8 +20,8 @@ namespace CntApp.Domains.Contacts
         {
             _contactsService = contactsService;
 
-            //LoadContacts();
-            Task.Run(() => LoadContacts());
+            LoadContacts();
+            //Task.Run(() => LoadContacts());
         }
 
         public void LoadContacts()

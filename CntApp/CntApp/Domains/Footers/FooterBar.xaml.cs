@@ -1,6 +1,6 @@
 ﻿using System;
 using CntApp.Domains.Home;
-using CntApp.Utilities.Messages;
+using CntApp.Messages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

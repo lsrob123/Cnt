@@ -1,8 +1,8 @@
 ﻿using System;
+using CntApp.Config;
 using CntApp.Domains.Contacts;
 using CntApp.Domains.Home;
-using CntApp.Utilities.Config;
-using CntApp.Utilities.Messages;
+using CntApp.Messages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
