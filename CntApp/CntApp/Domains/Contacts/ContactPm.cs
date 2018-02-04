@@ -8,13 +8,11 @@ namespace CntApp.Domains.Contacts
     [Preserve(AllMembers = true)]
     public class ContactPm : SqLitePersistenceModelBase, IContact
     {
-        //public PersonName PersonName { get; set; }
+        [MaxLength(50)]
+        public string FamilyName { get; set; }
 
-        //public ContactPersistenceModel WithPersonName(PersonName personName)
-        //{
-        //    PersonName = personName;
-        //    return this;
-        //}
+        [MaxLength(50)]
+        public string GivenName { get; set; }
 
         public ContactPm WithPersonName(IPersonName personName)
         {
@@ -22,8 +20,5 @@ namespace CntApp.Domains.Contacts
             GivenName = personName.GivenName;
             return this;
         }
-
-        public string FamilyName { get; set; }
-        public string GivenName { get; set; }
     }
 }

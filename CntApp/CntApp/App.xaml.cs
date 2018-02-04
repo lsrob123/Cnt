@@ -1,5 +1,5 @@
 ﻿using CntApp.Master;
-using CntApp.Utilities.Dependencies;
+using CntApp.Utilities.Config;
 using Lx.Utilities.Contracts.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

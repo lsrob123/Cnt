@@ -3,7 +3,6 @@ using CntApp.Domains.Contacts;
 using CntApp.Utilities.Files;
 using Lx.Utilities.Contracts.Mapping;
 using Lx.Utilities.NetStandard.Pagination;
-using Lx.Utilities.NetStandard.Persistence;
 using SQLite;
 
 namespace CntApp.Utilities.Persistence
@@ -30,7 +29,7 @@ namespace CntApp.Utilities.Persistence
         public ListContactsResult ListContacts(IPaginationInfo pagination)
         {
             var contactPms = _connection.Table<ContactPm>().ToList();
-            var contacts = contactPms.Select(x => new Contact().WithValidKey(x.Key).WithPersonName(x))
+            var contacts = contactPms.Select(x => _mappingService.Map<Contact>(x))
                 .ToList();
 
             var result = new ListContactsResult

@@ -5,6 +5,5 @@ namespace CntApp.Domains.Contacts
 {
     public interface IContact : IEntity, IPersonName
     {
-        //PersonName PersonName { get; set; }
     }
 }

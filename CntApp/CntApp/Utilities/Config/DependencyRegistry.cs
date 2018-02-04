@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using CntApp.Domains.Contacts;
+﻿using CntApp.Domains.Contacts;
 using CntApp.Domains.Home;
 using CntApp.Domains.MyProfile;
 using CntApp.Domains.NavigationBar;
@@ -9,7 +8,7 @@ using Lx.Utilities.Contracts.Mapping;
 using Lx.Utilities.NetStandard.Mapping;
 using Xamarin.Forms;
 
-namespace CntApp.Utilities.Dependencies
+namespace CntApp.Utilities.Config
 {
     public static class DependencyRegistry
     {
@@ -32,7 +31,7 @@ namespace CntApp.Utilities.Dependencies
         /// </summary>
         public static void Init()
         {
-            MappingService = new MappingService(new MapperConfiguration(x => x.CreateMissingTypeMaps = true));
+            MappingService = new MappingService(MappingConfigurator.CreateMapperConfiguration());
 
             Repository = new Repository(FileManager, MappingService);
 
