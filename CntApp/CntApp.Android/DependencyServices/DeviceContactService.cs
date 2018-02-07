@@ -19,11 +19,11 @@ namespace CntApp.Droid.DependencyServices
             string[] projection =
             {
                 ContactsContract.Contacts.InterfaceConsts.Id,
-                ContactsContract.Contacts.InterfaceConsts.DisplayName
+                ContactsContract.Contacts.InterfaceConsts.DisplayName,
                 //ContactsContract.CommonDataKinds.Email.DisplayName,
-                //ContactsContract.CommonDataKinds.Email.Address,
+                //ContactsContract.CommonDataKinds.Email.Address
                 //ContactsContract.CommonDataKinds.Phone.Number,
-                //ContactsContract.CommonDataKinds.Phone.NormalizedNumber,
+                //ContactsContract.CommonDataKinds.Phone.NormalizedNumber
                 //ContactsContract.ContactsColumns.ContactLastUpdatedTimestamp,
                 //ContactsContract.Contacts.InterfaceConsts.PhotoId,
                 //ContactsContract.Contacts.InterfaceConsts.PhotoUri,
@@ -42,7 +42,13 @@ namespace CntApp.Droid.DependencyServices
                 try
                 {
                     var displayName = cursor.GetString(cursor.GetColumnIndex(projection[1]));
-                    var contact = new Contact().WithValidKey().WithDisplayName(displayName);
+                    //var emailDisplayName = cursor.GetString(cursor.GetColumnIndex(projection[2]));
+                    //var emailAddress = cursor.GetString(cursor.GetColumnIndex(projection[3]));
+
+                    var contact = new Contact().WithValidKey()
+                        .WithDisplayName(displayName)
+                        //.WithEmail(emailDisplayName, emailAddress)
+                        ;
                     contacts.Add(contact);
                 }
                 catch (Exception ex)
@@ -50,6 +56,8 @@ namespace CntApp.Droid.DependencyServices
                     var a = ex;
                 }
             } while (cursor.MoveToNext());
+
+            cursor.Close();
 
             return contacts;
 

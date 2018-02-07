@@ -15,8 +15,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" >
-                                <Label Text="{Binding GivenName}"></Label>
-                                <Label Text="{Binding FamilyName}"></Label>
+                                <Label Text="{Binding DisplayName}"></Label>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

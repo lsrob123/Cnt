@@ -47,5 +47,11 @@ namespace CntApp.Domains.Contacts
             return this;
         }
 
+        public Contact WithEmail(string emailDisplayName, string emailAddress) {
+            EmailDisplayName = emailDisplayName;
+            EmailAddress = emailAddress;
+
+            return this;
+        }
     }
 }
